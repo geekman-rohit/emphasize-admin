@@ -17,11 +17,11 @@ module.exports = function(grunt) {
     watch: {
         sass: {
             files: ["**/*.scss"],
-            tasks: ['sass']
+            tasks: ['sass','copy']
         },
         js: {
           files: ["js/**/app.js"],
-          tasks: ['uglify']
+          tasks: ['uglify','copy']
         },
         html: {
           files: ["html/**/*.html"],
@@ -37,23 +37,12 @@ module.exports = function(grunt) {
                 {
                   expand: true,
                   cwd: './html',
-                  src: ['**/*.html'],
-                  dest: 'web/',
+                  src: ['**/*.html','!**/parts/*.html'],
+                  dest: 'dist/',
                   ext: '.html'
                 },
                 ],
         },
-        dist: {
-            files: [
-                {
-                  expand: true,
-                  cwd: './html',
-                  src: ['**/*.html'],
-                  dest: 'dist/web',
-                  ext: '.html'
-                },
-                ],
-        }
     },
     browserSync: {
       dev: {
@@ -66,8 +55,8 @@ module.exports = function(grunt) {
           watchTask: true,
           open:false,
           server: {
-            baseDir: "./",
-            directory: true
+            baseDir: "./dist",
+            directory: false,
           }
 
         }
@@ -90,12 +79,50 @@ module.exports = function(grunt) {
       },
       dist: {
           files: [
-              {expand: true, src: ['web/**/*.html'], dest: 'dist', filter: 'isFile'},
               {expand: true, src: ['css/**/*.css'], dest: 'dist', filter: 'isFile'},
               {expand: true, src: ['scripts/**/*.js'], dest: 'dist', filter: 'isFile'},
               {expand: true, src: ['img/**/*'], dest: 'dist', filter: 'isFile'},
-              {expand: true, src: ['bower_components/**/*'], dest: 'dist', filter: 'isFile'},
           ]
+      }
+  },
+  bowercopy: {
+      options:{
+          runBower:true
+      },
+      dist: {
+          options: {
+              destPrefix: 'dist/vendor'
+          },
+          files: {
+              'bootstrap/dist/': 'bootstrap/dist/',
+              'bootstrap-switch/dist/': 'bootstrap-switch/dist/',
+              'bootstrap3-wysihtml5-bower/dist/': 'bootstrap3-wysihtml5-bower/dist/',
+              'c3/c3.min.js':'c3/c3.min.js',
+              'c3/c3.min.css': 'c3/c3.min.css',
+              'chart.js/dist': 'chart.js/dist',
+              'chartist/dist':'chartist/dist',
+              'd3/d3.min.js':'d3/d3.min.js',
+              'dropzone/dist':'dropzone/dist',
+              'font-awesome/css':'font-awesome/css',
+              'font-awesome/fonts':'font-awesome/fonts',
+              'fullcalendar/dist':'fullcalendar/dist',
+              'iCheck/skins/square/_all.css':'iCheck/skins/square/_all.css',
+              'iCheck/icheck.min.js':'iCheck/icheck.min.js',
+              'jquery-slimscroll/jquery.slimscroll.min.js':'jquery-slimscroll/jquery.slimscroll.min.js',
+              'jquery.easy-pie-chart/dist':'jquery.easy-pie-chart/dist',
+              'jquery.sparkline/dist':'jquery.sparkline/dist',
+              'mdi/css':'mdi/css',
+              'mdi/fonts':'mdi/fonts',
+              'moment/min/moment.min.js':'moment/min/moment.min.js',
+              'morris.js/morris.min.js':'morris.js/morris.min.js',
+              'morris.js/morris.css':'morris.js/morris.css',
+              'open-iconic/font':'open-iconic/font',
+              'peity/jquery.peity.min.js':'peity/jquery.peity.min.js',
+              'raphael/raphael.min.js':'raphael/raphael.min.js',
+              'sweetalert2/dist':'sweetalert2/dist',
+              'toastr':'toastr',
+              'jquery/dist/jquery.min.js':'jquery/dist/jquery.min.js',
+          }
       }
   },
   cssmin: {
@@ -122,7 +149,7 @@ module.exports = function(grunt) {
               'scripts/init.min.js': 'scripts/init.js',
               'scripts/panel.min.js': 'scripts/panel.js',
               'scripts/sidebar.min.js':'scripts/sidebar.js',
-              'scripts/emphasize.min.js': ['scripts/classtoggle.js', 'scripts/collapsibleMenu.js', 'scripts/colors.js', 'scripts/init.js', 'scripts/panel.js', 'scripts/sidebar.js',]
+              'scripts/emphasize-all.min.js': ['scripts/classtoggle.js', 'scripts/collapsibleMenu.js', 'scripts/colors.js', 'scripts/init.js', 'scripts/panel.js', 'scripts/sidebar.js',]
           }
       }
   }
@@ -138,9 +165,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-bowercopy');
   // Default task(s).
-  grunt.registerTask('build', ['processhtml:build','sass','postcss','cssmin','uglify']);
-  grunt.registerTask('dist', ['build','copy']);
-  grunt.registerTask('default', ['build','browserSync','watch']);
+  grunt.registerTask('build', ['processhtml','sass','postcss','cssmin','uglify']);
+  grunt.registerTask('dist', ['build','copy','bowercopy']);
+  grunt.registerTask('default', ['dist','browserSync','watch']);
 
 };
