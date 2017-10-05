@@ -1,0 +1,41 @@
+// Font size mixin
+// This theme uses complete em based values for padding and widht/height for components like buttons and navbars
+// This makes font size declaration value and its unit extremely important
+// Use this mixin to centrally control font size unit in the theme
+// Change em to rem for a fixed size for each component, unrelated to parent component.
+// Labels and Badges are inherently em based and don't use this mixin
+// Use this mixin only to define font size of a component and not it's children.
+// For eg. Use this mixin to define the base font size of a button, use direct em declaration to declare font size of an icon inside the button
+
+$mode: rem;
+
+@mixin font-size-emize($size) {
+    //Used to include font size in em or rem, no declaration added in pixel mode
+    @if $mode == rem {
+        font-size: ($size) * 1rem;
+    } @else if $mode == em {
+        font-size: ($size) * 1em;
+    }
+}
+@mixin font-size($size) {
+    font-size: ($size * $font-size-small);
+    @include font-size-emize($size);
+    @media (min-width: $screen-md-min) {
+        font-size: ($size * $font-size-large);
+        @include font-size-emize($size);
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: ($size * $font-size-larger);
+        @include font-size-emize($size);
+    }
+}
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " "; 
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

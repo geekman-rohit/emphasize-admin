@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<link rel="stylesheet" href="../../bower_components/c3/c3.min.css">
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+<style>
+.subtasks h4 {
+    margin-bottom: 1em;
+}
+.subtask h6 {
+    margin-bottom: 1em;
+}
+</style>
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+
+    <div class="page">
+
+        <header class="ribbon">
+            <h2>
+                Dashboard
+            </h2>
+            <ol class="breadcrumb">
+                 <li class=""><a href="">Home</a></li>
+                 <li class="active">Dashboard</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-raised" >
+                        <div class="">
+                            <div class="panel-heading no-padding panel-item-raised pull-left">
+                                <div class="square-icon square-icon-lg square-icon-primary">
+                                    <i class="fa fa-gamepad"></i>
+                                </div>
+                                <!-- /.media-block -->
+
+                            </div>
+                        </div>
+
+                        <div class="panel-body ">
+                            <div class="align-right">
+                                <h6>DOWNLOADS</h6>
+                                <h2>
+                                    1,200,000
+                                </h2>
+                            </div>
+                            <div class="chart-container">
+                                <div class="widget-chart">
+                                    <canvas id="chart-line" width="400" height="87"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!-- /.col-md-4 -->
+                <div class="col-lg-4">
+
+
+                    <div class="panel panel-raised" style="">
+                        <div class="">
+                            <div class="panel-heading no-padding panel-item-raised pull-left">
+                                <div class="square-icon square-icon-lg square-icon-info">
+                                    <i class="fa fa-retweet"></i>
+                                </div>
+                                <!-- /.media-block -->
+
+                            </div>
+                        </div>
+
+                        <div class="panel-body ">
+                            <div class="align-right">
+                                <h6>POPULARITY</h6>
+                                <h2>
+                                    3,240,100
+                                </h2>
+                            </div>
+                            <div class="chart-container">
+                                <div class="widget-chart">
+                                    <canvas id="chart-line2" width="400" height="87"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="panel panel-raised" style="">
+                        <div class="">
+                            <div class="panel-heading no-padding panel-item-raised pull-left">
+                                <div class="square-icon square-icon-lg square-icon-success">
+                                    <i class="fa fa-dollar"></i>
+                                </div>
+                                <!-- /.media-block -->
+
+                            </div>
+                        </div>
+
+                        <div class="panel-body ">
+                            <div class="align-right">
+                                <h6>REVENUE</h6>
+                                <h2>
+                                    11,240,100
+                                </h2>
+                            </div>
+                            <div class="chart-container">
+                                <div class="widget-chart">
+                                    <canvas id="chart-line3" width="400" height="87"></canvas>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-8">
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                          <h2>
+                              Monthly Sale
+                          </h2>
+                          <span class="subtext">
+                              From July to November 2017
+                          </span>
+                            <ul class="panel-actions">
+                                <li>
+                                    <a href="#" class="panel-action">
+                                        <i class="mdi mdi-dots-vertical">
+
+                                        </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="panel-action">
+                                        <i class="mdi mdi-chevron-up">
+
+                                        </i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="panel-body" style="padding-top:0.5em;">
+
+                            <div class="chart-legends"  style="text-align:right; padding-right:1em;">
+                                <span>
+                                    <i class="fa fa-circle mg-sm" style="color:rgba(36,169,188,1);"></i>Product Sale
+
+                                    <i class="fa fa-circle mg-sm" style="color:rgba(30,126,239,1);"></i>Visitors
+                                    <i class="fa fa-circle mg-sm" style="color:rgba(115,89,238,1);"></i>Revenue
+                                </span>
+                            </div>
+
+                            <div class="chart-container" style="position:relative;">
+
+                                <canvas id="chart-bar" width="500" height="300"></canvas>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="panel">
+                        <div class="panel-heading">
+                          <h2>
+                              Monthly Sale
+                          </h2>
+                          <span class="subtext">
+                              From July to November 2017
+                          </span>
+                            <ul class="panel-actions">
+                                <li>
+                                    <a href="#" class="panel-action">
+                                        <i class="mdi mdi-dots-vertical">
+
+                                        </i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="panel-action">
+                                        <i class="mdi mdi-chevron-up">
+
+                                        </i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div id="donut-chart"></div>
+
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-md-4 -->
+
+            </div>
+            <!-- /.row -->
+            <div class="row">
+
+                <div class="col-lg-5">
+                    <div class="panel panel-info">
+                        <div class="panel-cover" style="background-image:url('../../img/mountains.jpeg');">
+
+                        </div>
+                        <div class="panel-highlight-image">
+
+                                <img src="../../img/face2.jpeg" alt="" class="img-thumb  img-circle">
+
+
+                        </div>
+                        <div class="panel-body align-center">
+                            <h2 style="margin-bottom:0.7rem">Alice Wondergirl</h2>
+                            <h4 class="" style="margin-bottom:1.2rem">
+                                Astronaut
+
+                            </h4>
+                            <p style="width:80%; margin-left:auto; margin-right:auto;">
+                                As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature.
+                            </p>
+                            <p>
+                                <button class="btn btn-primary btn-round ">
+                                    <i class="fa fa-facebook"></i>
+                                </button>
+                                <button class="btn btn-info btn-round ">
+                                    <i class="mdi mdi-twitter"></i>
+                                </button>
+                                <button class="btn btn-warning btn-round ">
+                                    <i class="mdi mdi-email"></i>
+                                </button>
+                            </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <div class="col-lg-4" style="">
+                  <div class="panel panel-primary">
+
+
+                    <div class="panel-heading">
+                        <div class="media">
+                            <div class="media-left" style="padding:0;">
+                                <div class="chart-container" style="">
+                                    <div class="easyPieChart" data-percent="73" style="position:relative; width:28px; height:28px; line-height: 28px; text-align:center;">
+                                        <div class="" style="padding-top:0px;">
+
+                                            <!--<i class="mdi mdi-adjusted mdi-check mdi-1x text-inactive" style="font-size:12px;"></i>-->
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="media-body" style="padding-top:3px;">
+                                <h4>
+                                    Finish UI Polishing
+
+                                </h4>
+                        </div>
+
+                    </div>
+                    <ul class="panel-actions">
+
+                        <li>
+                            <a href="#" class="panel-action">
+                                <i class="mdi mdi-pencil" style="font-size:0.9em">
+
+                                </i>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    </div>
+                    <!-- /.panel-heading -->
+
+                    <div class="panel-body" style="padding-top:2em;">
+                            <div class="text-muted">
+                                    <i class="fa fa-calendar"></i> 22 July 2017
+                                    <div class="pull-right">
+                                         Alex Jones <img class="img-circle img-thumb-xxs" src="../../img/rocket.jpg" alt="...">
+                                    </div>
+                            </div>
+                            <div class="description text-dimmed" style="margin-top:2em; padding-right:2em; padding-bottom:0.1em;">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                                    Nam porta sem sit amet nunc rutrum blandit.
+
+                                </p>
+                                <p>
+                                     Sed volutpat vitae justo quis tristique.
+
+                                </p>
+                            </div>
+                            <div class="subtasks" style="padding:1.5em 0; padding-right:2em;">
+
+                                <h4>
+                                    Subtasks
+                                </h4>
+                                <div class="subtasks-list" style="padding:0.3em 0">
+                                    <div class="subtask" style="padding-bottom:0.1em;">
+                                        <h6>
+                                            Update Photoshop File
+                                        </h6>
+                                        <div class="progress progress-md">
+                                          <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%;">
+                                            <span></span>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="subtask" style="padding-bottom:0.1em;">
+                                        <h6>
+                                            Generate Bug Report
+                                        </h6>
+                                        <div class="progress progress-md progress-md-success">
+                                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                                            <span></span>
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="subtask" style="padding-bottom:0.1em;">
+                                        <h6>
+                                            Remove Outdated Code
+                                        </h6>
+                                        <div class="progress progress-md progress-md-warning">
+                                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+                                            <span></span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+
+                    </div>
+                    <!-- /.panel-body -->
+                  </div>
+                  <!-- /.panel -->
+                </div>
+                <!-- /.col-md-4 -->
+
+
+
+                <div class="col-lg-3">
+                    <div class="panel">
+                        <div class="panel-heading no-padding panel-item-raised">
+                            <img src="../../img/camera.jpeg" alt="" class="panel-image">
+                        </div>
+                        <div class="panel-highlight-action">
+                            <button class="btn btn-round btn-danger btn-lg">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="panel-body">
+                            <h2>Alice in Wonderland</h2>
+                            <p>
+
+
+                                As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature.
+                            </p>
+
+                            <p>
+                                <button class="btn btn-primary">
+                                    Download
+                                </button>
+                            </p>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+                <!-- /.col-md-3 -->
+
+
+
+
+              </div>
+              <!-- /.row -->
+
+        </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script src="../../bower_components/d3/d3.min.js"></script>
+<script src="../../bower_components/c3/c3.min.js"></script>
+
+<script>
+$(function() {
+    var ctx = $('#chart-line');
+    var salesChart = new Chart(ctx, {
+        'type': 'line',
+        data: {
+            labels: ["0","1","2", "3","4", "5","6","7","8", "9","0","1","2", "3","4", "5","6","7","8", "9"],
+            datasets:[
+                {
+                    label:'Performance Score',
+                    data:[200,250,340,160,150,170,200,180,210, 150,200,290,260,330,350,300,340,400,500,600 ],
+                    borderColor: "rgba(119,95,238,1)",
+                    backgroundColor: "rgba(119,95,238,1)",
+                    lineTension: 0,
+                    pointRadius:0
+
+                }
+            ],
+
+
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                        display:false
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        autoSkip:false,
+                        display: false,
+                        stepSize:50,
+
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display:false,
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        display: false,
+
+                    }
+
+                }]
+            },
+            legend: {
+                display: false,
+                position: 'top',
+                fullWidth: false,
+                labels: {
+                    boxWidth:14
+                }
+
+            }
+        }
+    })
+
+    var ctx = $('#chart-line2');
+    var salesChart = new Chart(ctx, {
+        'type': 'line',
+        data: {
+            labels: ["0","1","2", "3","4", "5","6","7","8", "9","0","1","2", "3","4", ],
+            datasets:[
+                {
+                    label:'Performance Score',
+                    data:[200,250,340,210, 250,200,400,500,400,290,260,340,330,350,300],
+                    borderColor: "rgba(30,126,239,0.9)",
+                    backgroundColor: "rgba(30,126,239,0.9)",
+                    lineTension: 0,
+                    pointRadius:0,
+
+                }
+            ],
+
+
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                        display:false
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        autoSkip:false,
+                        display: false,
+                        stepSize:50,
+
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display:false,
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        display: false,
+
+                    }
+
+                }]
+            },
+            legend: {
+                display: false,
+                position: 'top',
+                fullWidth: false,
+                labels: {
+                    boxWidth:14
+                }
+
+            }
+        }
+    })
+
+    var ctx = $('#chart-line3');
+    var salesChart = new Chart(ctx, {
+        'type': 'line',
+        data: {
+            labels: ["0","1","2", "3","4", "5","6","7","8", "9","0","1","2", "3","4", ],
+            datasets:[
+                {
+                    label:'Performance Score',
+                    data:[200,250,240,250, 220,200,300,400,300,190,160,240,330,350,300],
+                    borderColor: "rgba(38,193,177,0.9)",
+                    backgroundColor: "rgba(38,193,177,0.9)",
+                    lineTension: 0,
+                    pointRadius:0,
+
+                }
+            ],
+
+
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                        display:false
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        autoSkip:false,
+                        display: false,
+                        stepSize:50,
+
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        display:false,
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        display: false,
+
+                    }
+
+                }]
+            },
+            legend: {
+                display: false,
+                position: 'top',
+                fullWidth: false,
+                labels: {
+                    boxWidth:14
+                }
+
+            }
+        }
+    })
+
+    var ctx = $('#chart-bar');
+    var salesChart = new Chart(ctx, {
+        'type': 'bar',
+        data: {
+            labels: ["Jan","Feb","March","April", "May"],
+            datasets:[
+                {
+                    label:'Performance Score',
+                    data:[100,50,180,70,80],
+                    borderColor:"rgba(38,193,177,1)",
+                    backgroundColor: "rgba(38,193,177,1)",
+
+
+                    lineTension: 0.3,
+                    borderWidth:1,
+
+                },
+
+                {
+                    label:'Performance Score',
+                    data:[200,100,180,50,90],
+                    borderColor:"rgba(30,126,239,1)",
+                    backgroundColor: "rgba(30,126,239,1)",
+                    lineTension: 0.3,
+                    borderWidth:1,
+
+                },
+                {
+                    label:'Performance Score',
+                    data:[400,150,280,130,300],
+                    borderColor: 'rgba(115,89,238,1)',
+                    backgroundColor: "rgba(115,89,238,1)",
+
+                    lineTension: 0.3,
+                    borderWidth:1,
+
+                },
+
+            ],
+
+
+        },
+        options: {
+
+
+
+            maintainAspectRatio: false,
+
+            scales: {
+                yAxes: [{
+                    gridLines: {
+                        tickMarkLength:0,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,1)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        autoSkip:true,
+                        stepSize: 100,
+                        display: true,
+                        padding: 10,
+
+                    }
+                }],
+                xAxes: [{
+                  categoryPercentage: 0.7,
+                    gridLines: {
+                        tickMarkLength:10,
+                        drawBorder:false,
+                        color: 'rgba(240,240,240,0)',
+                        zeroLineColor: 'rgba(240,240,240,1)',
+                        display: true,
+                    },
+                    ticks: {
+                        beginAtZero:true,
+                        display: true,
+
+                    }
+
+                }]
+            },
+            legend: {
+                display: false,
+
+            }
+        }
+    })
+
+    var chart = c3.generate({
+    bindto: '#donut-chart',
+    data: {
+        columns: [
+            ['Retweets', 0],
+            ['Shares', 100],
+            ['Sale', 160],
+            ['Revenue', 80],
+
+
+        ],
+        colors: {
+            'Retweets': '#FC5F7C',
+            'Shares': '#1E88E5',
+            'Sale': '#7359EE',
+            'Revenue': 'rgba(38,193,177,0.9)',
+
+        },
+        type: 'donut'
+    }
+    });
+
+
+    $('.easyPieChart').easyPieChart({
+        size:28,
+        scaleColor:false,
+        lineWidth:2,
+        barColor:'#fff',
+        trackColor: 'rgba(0,0,0,0.1)',
+    });
+});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* * * * * * *
+* Progress Styling
+*
+* * * * * * */
+
+// ---------------Variables--------------- //
+$progress-height-base: 1.8em;
+$progress-height-md: 4px;
+
+// ---------------Styles--------------- //
+.progress {
+    height: $progress-height-base;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #e7e7e7;
+    font-weight: 600;
+    @include font-size(1);
+    .progress-bar {
+        box-shadow: none;
+        background-color: map-get($primary, base);
+        font-weight: 400;
+        font-size: 1em;
+        line-height: $progress-height-base;
+        &.progress-bar-info {
+            background-color: map-get($info, base);
+        }
+        &.progress-bar-warning {
+            background-color: map-get($warning, base);
+        }
+        &.progress-bar-danger {
+            background-color: map-get($danger, base);
+        }
+        &.progress-bar-success {
+            background-color: map-get($success, base);
+        }
+    }
+    &.progress-md {
+        height: $progress-height-md;
+        background-color: map-get($primary, faded);
+        &.progress-md-info {
+            background-color: map-get($info, faded);
+        }
+        &.progress-md-warning {
+            background-color: map-get($warning, faded);
+        }
+        &.progress-md-danger {
+            background-color: map-get($danger, faded);
+        }
+        &.progress-md-success {
+            background-color: map-get($success, faded);
+        }
+    }
+}

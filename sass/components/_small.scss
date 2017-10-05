@@ -1,0 +1,171 @@
+/* * * * * * *
+*  Styling for Small Components
+*  breadcrumb, main page title (ribbon), pulse sign, ripple effect
+*
+* * * * * * */
+.ribbon {
+    //box-shadow: $box-shadow-mini;
+    padding: 1.5em 40px 1.5em;
+    //background-color: $bgcolor;
+
+
+    color: $color-base;
+    //border-bottom: 4px solid map-get($orange,400);
+    h2 {
+        margin: 0;
+        padding: 0;
+
+        font-size: $font-size-h1 * 1em;
+    }
+}
+
+.breadcrumb {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5em;
+    background: none;
+    font-size: 1em;
+    //font-family: $font-family-headings;
+
+    a {
+        color: $color-faded;
+        font-size: 1em;
+    }
+    &.breadcrumb-caret {
+        li + li{
+            &::before {
+                content: "\e258";
+                font-family: "Glyphicons Halflings";
+                line-height: 1;
+                font-size: 0.7em;
+                padding-left: 3px;
+                padding-right: 7px;
+            }
+        }
+    }
+
+}
+@keyframes scaleThrice {
+    // Animation for Pulse
+    0% {
+        transform:  scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+.pulse {
+    position: relative;
+    transform: scale(1.1);
+    &.pulse-right {
+        position: absolute;
+        right: 15px;
+        margin-top: -1px;
+
+        z-index: 13;
+
+
+    }
+    &.pulse-left {
+        position: absolute;
+        left: 14px;
+        top: 14px;
+    }
+    &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        background: #EF5350;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        transform: scale(1);
+    }
+    &::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        background: none;
+        border: 1px solid #EF5350;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        opacity: 1;
+        transform: scale(1);
+        animation-name: scaleThrice;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+    }
+}
+
+//Easy Pi Chart
+
+.easyPieChart {
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+// Ripple
+
+
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}
+
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: white;
+  animation: ripple-animation 2s;
+}
+
+.main-nav .ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: black;
+  animation: ripple-animation 2s;
+}
+
+// Popups
+.tooltip {
+    &.left,&.right,&.top,&.bottom {
+
+    }
+    .tooltip-inner {
+        padding: 1em 1em 0.8em 1em;
+    }
+
+}
+.popover {
+    border-radius: 0px;
+    &.left,&.right,&.top,&.bottom {
+
+    }
+    .popover-content {
+        padding: 1em 1em 0.8em 1em;
+    }
+
+}

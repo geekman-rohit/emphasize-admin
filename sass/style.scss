@@ -1,0 +1,15 @@
+// Primay Sass file to be compiled
+// Add or Remove Files as per your requirement
+
+// @import "colors"; //Material Design Color Variables
+@import "variables/variables"; // Variable Files
+@import "mixins"; // Mixins
+@import "typography"; // Basic Typography Styles
+@import "tables";
+@import "form";
+@import "media";
+@import "components/components"; // All UI Components
+@import "layout"; // Layout
+@import "pages/pages"; // Special Pages Styling Files
+@import "charts/charts"; // Styling for svg based charts
+@import "demo"; // Special Pages Styling Files

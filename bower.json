@@ -1,0 +1,44 @@
+{
+  "name": "twbs-components",
+  "description": "Admin Dashboard theme components",
+  "main": "",
+  "authors": [
+    "Rohit Mulange <rohit@rohit.codes>"
+  ],
+  "keywords": [],
+  "homepage": "https://github.com/geekman-rohit/twbs-components",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0",
+    "bootstrap": "^3.3.7",
+    "peity": "^3.2.1",
+    "toastr": "^2.1.3",
+    "chart.js": "^2.6.0",
+    "jquery.easy-pie-chart": "^2.1.6",
+    "mdi": "^2.0.46",
+    "chartist": "^0.11.0",
+    "morris.js": "morrisjs/morris.js#^0.5.1",
+    "c3": "^0.4.15",
+    "jquery.sparkline": "^2.1.2",
+    "iCheck": "^1.0.2",
+    "dropzone": "^5.1.1",
+    "bootstrap3-wysihtml5-bower": "^0.3.3",
+    "jquery-slimscroll": "^1.3.8",
+    "sweetalert2": "^6.8.0",
+    "open-iconic": "^1.1.1",
+    "bootstrap-switch": "^3.3.4",
+    "fullcalendar": "^3.5.1"
+  },
+
+  "resolutions": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Progress</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Tooltips &amp; Popovers
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">UI</a></li>
+              <li class="active">Progress Bars</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Tooltips</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>Basic Bootstrap Tooltips</p>
+                                </div>
+                                <div class="demo-elements">
+                                    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on Top">Tooltip on Top</button>
+                                    <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Tooltip on Bottom">Tooltip on Bottom</button>
+                                    <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="left" title="Tooltip on Left">Tooltip on Left</button>
+                                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Tooltip on Right">Tooltip on Right</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Popovers</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>Basic Bootstrap Popovers</p>
+                                </div>
+                                <p class="demo-elements">
+
+
+                                    <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Click for Popover on Top
+                                    </button>
+
+                                    <button type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+                                    sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Click for Popover on Bottom
+                                    </button>
+                                    <button type="button" class="btn btn-warning" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                      Click for Popover on Left
+                                    </button>
+
+                                    <button type="button" class="btn btn-danger" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Click for Popover on Right
+                                    </button>
+
+
+                                </p>
+                            </div>
+
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>Dismissmisable Basic Bootstrap Popovers</p>
+                                </div>
+                                <p class="demo-elements">
+
+
+                                    <button type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Dismissmisable for Popover on Top
+                                    </button>
+
+                                    <button type="button" class="btn btn-info" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-content="Vivamus
+                                    sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Dismissmisable for Popover on Bottom
+                                    </button>
+                                    <button type="button" class="btn btn-success" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                      Dismissmisable for Popover on Left
+                                    </button>
+
+                                    <button type="button" class="btn btn-warning" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                       Dismissmisable for Popover on Right
+                                    </button>
+
+
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+
+                </div>
+                <!-- /.col-md-6 -->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+        <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script>
+    $(function(){
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+          $('[data-toggle="popover"]').popover();
+        })
+    })
+</script>
+</body>
+</html>

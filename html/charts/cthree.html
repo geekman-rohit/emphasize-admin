@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+
+<link rel="stylesheet" href="../../bower_components/c3/c3.css">
+<style>
+#line-chart .c3-line-data1 {
+  stroke-width: 2px;
+
+}
+#line-chart .c3-line-data2 {
+  stroke-width: 2px;
+}
+.c3-ygrids line {
+    stroke: #ddd;
+}
+.c3 .c3-axis path, .c3 .c3-axis line {
+    stroke: #aaa;
+}
+.c3 .tick text {
+    fill: #777;
+}
+</style>
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                C3 charts
+            </h2>
+            <ol class="breadcrumb">
+                 <li class=""><a href="">Charts</a></li>
+                 <li class="active">C3</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Line and Area Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <div id="line-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Bar Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="bar-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+
+
+
+
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Pie Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="pie-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Donut Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="donut-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Scatter Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="scatter-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Line and Area Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="area-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Mixed Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="mix-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script src="../../bower_components/d3/d3.min.js"></script>
+<script src="../../bower_components/c3/c3.min.js"></script>
+<script>
+$(function(){
+    var chart = c3.generate({
+    bindto: '#line-chart',
+    data: {
+      columns: [
+            ['data1', 30, 200, 100, 400, 150, 250],
+            ['data2', 50, 20, 10, 40, 15, 25]
+        ],
+        types: {
+            data1: 'line',
+            data2: 'line',
+        },
+        colors: {
+            data1:'rgba(75, 192, 192, 1)',
+            data2:'rgba(153, 102, 255, 1)',
+        },
+
+    },
+    grid: {
+        y: {
+            show: true,
+        }
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#bar-chart',
+    data: {
+        columns: [
+            ['data1', 150, 120, 60, 240, 55, 125],
+            ['data2', 30, 200, 100, 400, 150, 250],
+
+        ],
+        type:'bar',
+       colors: {
+            data1:'rgba(75, 192, 192, 1)',
+            data2:'rgba(153, 102, 255, 1)',
+        },
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#pie-chart',
+    data: {
+        columns: [
+            ['data1', 150],
+            ['data2', 60],
+            ['data3', 100],
+
+
+        ],
+        type: 'pie',
+        colors: {
+            data1:'rgba(75, 192, 192, 1)',
+            data2:'rgba(153, 102, 255, 1)',
+            data3:'rgba(255, 159, 64, 1)',
+        },
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#donut-chart',
+    data: {
+        columns: [
+            ['data1', 150],
+            ['data2', 60],
+            ['data3', 100],
+
+
+        ],
+        type: 'donut',
+        colors: {
+            data1:'rgba(75, 192, 192, 1)',
+            data2:'rgba(153, 102, 255, 1)',
+            data3:'rgba(255, 159, 64, 1)',
+        },
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#scatter-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25],
+        ['data3', 150, 120, 60, 140, 85, 75],
+
+    ],
+    type: 'scatter',
+    colors: {
+        data1:'rgba(75, 192, 192, 1)',
+        data2:'rgba(153, 102, 255, 1)',
+        data3:'rgba(255, 159, 64, 1)',
+    },
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#area-chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 120, 50, 140, 95, 125]
+    ],
+    types: {
+        data1: 'spline',
+        data2: 'area',
+    },
+    colors: {
+        data1:'rgba(75, 192, 192, 1)',
+        data2:'rgba(153, 102, 255, 1)',
+
+    },
+    }
+    });
+
+    var chart = c3.generate({
+    bindto: '#mix-chart',
+    data: {
+          columns: [
+             ['data1', 150, 120, 60, 240, 185, 175],
+            ['data2', 30, 200, 100, 400, 150, 250],
+            ['data3', 10, 50, 50, 140, 95, 125],
+
+        ],
+        types: {
+            data1: 'scatter',
+            data2: 'line',
+            data3: 'bar',
+        },
+        colors: {
+            data1:'rgba(75, 192, 192, 1)',
+            data2:'rgba(153, 102, 255, 1)',
+            data3:'rgba(255, 159, 64, 1)',
+        },
+    }
+
+    });
+})
+</script>
+</body>
+</html>

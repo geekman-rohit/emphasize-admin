@@ -1,0 +1,74 @@
+// Base Theme
+
+$color-base:  rgb(85,97,109); // Base Font Color
+$color-dark:  rgb(75,86,97); // Dark Font Color
+$color-dimmed: rgb(100,112,124); // Dimmed Font Color
+$color-faded: rgb(120,130,140); // Faded Font Color
+$color-inactive: rgb(170,180,190); // Faded  Inactive Font Color
+
+$bgcolor-base: rgb(241,246,251); // Body Background Color
+
+$bgcolor: #ffffff; // Content Background Color
+
+$bgcolor-faded: #f7f7f7; // Content Background Color for faded eg. for striped tables
+
+$bgcolor-extrafaded: #eee; // Content Background Color for faded eg. for striped tables
+
+$separator-color: #eee;
+
+$link-color: #1565C0; // Link Default Color
+
+// Basic Colors used in Form Validation
+
+$blue : #1565C0;
+$red : #D32F2F;
+$green : #2E7D32;
+$orange : #F57C00;
+
+
+// Contextual colors
+$primary: (
+    faded:lighten(#7359EE,32%),
+    light: lighten(#7359EE,5%),
+    base: #7359EE,
+    accent: darken(#7359EE,3%),
+    dark: darken(#7359EE,8%),
+);
+
+$warning: (
+    faded:lighten(#FFB22B,35%),
+    light: lighten(#FFB22B,5%),
+    base: #FFB22B,
+    accent: darken(#FFB22B,6%),
+    dark: darken(#FFB22B,15%),
+);
+
+$info: (
+    faded:lighten(#1E88E5,35%),
+    light: lighten(#1E88E5,5%),
+    base: #1E88E5,
+    accent: darken(#1E88E5,5%),
+    dark: darken(#1E88E5,15%),
+);
+$danger: (
+    faded:lighten(#fc4b6c,30%),
+    light: lighten(#fc4b6c,10%),
+    base: lighten(#fc4b6c,4%),
+    accent: darken(#fc4b6c,1%),
+    dark: darken(#fc4b6c,10%),
+);
+
+$success: (
+    faded:lighten(#26C1B1,39%),
+    light: lighten(#26C1B1,4%),
+    base: darken(#26C1B1,0%),
+    accent: darken(#26C1B1,4%),
+    dark: darken(#26C1B1,15%),
+);
+
+$grey:(
+    faded: #eee,
+    base: #f5f5f5,
+    accent: #777,
+    dark: #ddd,
+);

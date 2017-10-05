@@ -1,0 +1,31 @@
+/* Example Media Query Usage
+* Sample Media Queries
+* Extra small devices (phones, less than 768px)
+* No media query since this is the default
+
+    CSS for Extra Small Devices --
+
+* Small devices (tablets, 768px and up)
+*
+    @media (min-width: $screen-sm-min) {
+
+        // CSS for Small devices
+     }
+*
+* Medium devices (desktops, 992px and up)
+*
+    @media (min-width: $screen-md-min) {
+
+       // CSS for Medium Devices
+
+    }
+
+* Large devices (large desktops, 1200px and up)
+*
+    @media (min-width: $screen-lg-min) {
+
+        //CSS for large Devices
+
+     }
+*
+*/

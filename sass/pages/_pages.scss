@@ -1,0 +1,94 @@
+@import "chat";
+@import "calendar";
+.faq {
+    .panel {
+        box-shadow: none;
+        margin-bottom: 1em;
+        .panel-collapse .panel-body {
+            border-top: none;
+            padding: 1em 1em;
+            padding-top: 0;
+            font-size: 1em;
+            color: $color-dimmed;
+
+
+        }
+    }
+
+    .panel-heading {
+        padding: 0 !important;
+        a {
+           display: block;
+           padding: 1em 0em;
+           font-weight: 500;
+           &:focus,&:active,&:hover {
+               background: none;
+               border: none;
+               outline: none;
+               text-decoration: none;
+           }
+
+           color: $link-color;
+
+       }
+    }
+
+}
+.invoice-summary {
+    @include clearfix;
+}
+
+.panel.pricing-panel{
+    &.pricing-popular {
+        transform: scale(1.04);
+        box-shadow: $box-shadow-large;
+    }
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-weight: 500;
+    box-shadow: $box-shadow-mini;
+    background-color: #f7f7f7;
+    border-radius: 0;
+    .panel-body {
+        padding: 0;
+    }
+    .pricing-title {
+        padding: 2em 0em;
+
+        border-radius: 0;
+        h2 {
+            font-size: $font-size-h1 *1em;
+            margin-bottom: 0;
+        }
+
+    }
+    .pricing-price {
+        padding: 2.5em;
+        h2 {
+
+            font-size: 3 *1em;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+    }
+}
+
+.pricing-feature-list  {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0em;
+    border-bottom: 1px solid #eee;
+    li {
+        color: $color-dimmed;
+        display: block;
+        margin: 0;
+        padding: 1em;
+        font-size: $font-size-h5 *1em;
+        border-top: 1px solid #eee;
+    }
+}
+.pricing-button {
+    padding: 1em;
+}

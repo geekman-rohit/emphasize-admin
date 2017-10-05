@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+<style>
+
+</style>
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Toastr
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li class="active">Toastr</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Toastr</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>
+                                        Toastr is a jQuery based Javascript library for Gnome / Growl type non-blocking notifications
+                                    </p>
+                                </div>
+                                <div class="demo-elements">
+                                    <button class="btn btn-info toastrinfo1">Show a Toast</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Toastr Color Themes</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>
+                                        You can use toastr for info, success, error or warning
+                                    </p>
+                                </div>
+                                <div class="demo-elements">
+                                    <button class="btn btn-info toastrinfo1">Info Toast</button>
+                                    <button class="btn btn-warning toastrwarning1">Warning Toast</button>
+                                    <button class="btn btn-success toastrsuccess1">Success Toast</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Toastr Features</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>
+                                        <strong>Toastr with a Progress Bar</strong>
+                                    </p>
+                                </div>
+                                <div class="demo-elements">
+                                    <button class="btn btn-info toastr-progress-1">Show a Progress Toast</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+
+<script>
+$(function(){
+    toastr.options.timeOut = 3000; // How long the toast will display without user interaction
+    toastr.options.extendedTimeOut = 6000; // How long the toast will display after a user hovers over it
+    $('.toastrinfo1').click(function(){
+        toastr.options.progressBar = false;
+        toastr.info('The SpaceShip is ready to warp!');
+    });
+    $('.toastrsuccess1').click(function(){
+        toastr.options.progressBar = false;
+        toastr.success('The SpaceShip is ready to warp!');
+    });
+    $('.toastrwarning1').click(function(){
+        toastr.options.progressBar = false;
+        toastr.warning('The SpaceShip is facing fuel leak!');
+    });
+    $('.toastr-progress-1').click(function(){
+        toastr.options.progressBar = true;
+        toastr.info('The SpaceShip is ready to warp!');
+    });
+
+})
+</script>
+</body>
+</html>

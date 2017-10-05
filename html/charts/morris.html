@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<link rel="stylesheet" href="../../bower_components/morris.js/morris.css">
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Morris Charts
+            </h2>
+            <ol class="breadcrumb">
+                 <li class=""><a href="">Charts</a></li>
+                 <li class="active">Morrisjs</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Line Chart</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div id="line-chart">
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Area Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="area-chart">
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Bar Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="bar-chart">
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Stacked Bar Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="sbar-chart">
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Donut Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="donut-chart">
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script src="../../bower_components/morris.js/morris.min.js"></script>
+<script src="../../bower_components/raphael/raphael.min.js"></script>
+
+<script>
+$(function(){
+
+    Morris.Line(
+        {
+            element: 'line-chart',
+            data: [
+                {
+                    year:'2011',target:200,achievement: 100,
+                },
+                {
+                    year:'2012',target:100,achievement: 100,
+                },
+                {
+                    year:'2013',target:300,achievement: 200,
+                },
+                {
+                    year:'2014',target:200,achievement: 300,
+                },
+                {
+                    year:'2015',target:500,achievement: 400,
+                }
+
+
+            ],
+            xkey: 'year',
+            ykeys:['target','achievement'],
+            labels:['Target','Achiement'],
+            parseTime: true,
+            eventStrokeWidth: 2,
+            resize: true,
+            lineWidth:2,
+            pointSize:6,
+            gridTextColor: '#aaa',
+            gridStrokeWidth:1 ,
+            gridLineColor: '#eee',
+            hideHover: true,
+            lineColors:['rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)']
+
+        }
+    )
+
+    Morris.Area(
+        {
+            element: 'area-chart',
+            data: [
+                {
+                    year:'2011',target:200,achievement: 100,
+                },
+                {
+                    year:'2012',target:300,achievement: 200,
+                },
+                {
+                    year:'2013',target:100,achievement: 200,
+                },
+                {
+                    year:'2014',target:200,achievement: 300,
+                },
+                {
+                    year:'2015',target:500,achievement: 400,
+                }
+
+
+            ],
+            xkey: 'year',
+            ykeys:['target','achievement'],
+            labels:['Target','Achiement'],
+            parseTime: true,
+            eventStrokeWidth: 2,
+            resize: true,
+            lineWidth:1,
+            pointSize:4,
+            gridTextColor: '#aaa',
+            gridStrokeWidth:1 ,
+            gridLineColor: '#eee',
+            hideHover: true,
+            behaveLikeLine: true,
+            lineColors:['rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)']
+
+
+        }
+    )
+
+    Morris.Bar(
+        {
+            element: 'bar-chart',
+            data: [
+                {
+                    year:'2011',target:200,achievement: 100,
+                },
+                {
+                    year:'2012',target:300,achievement: 200,
+                },
+                {
+                    year:'2013',target:100,achievement: 200,
+                },
+                {
+                    year:'2014',target:200,achievement: 300,
+                },
+                {
+                    year:'2015',target:500,achievement: 400,
+                }
+
+
+            ],
+            xkey: 'year',
+            ykeys:['target','achievement'],
+            labels:['Target','Achiement'],
+            parseTime: true,
+            eventStrokeWidth: 2,
+            resize: true,
+            lineWidth:1,
+            pointSize:4,
+            gridTextColor: '#aaa',
+            gridStrokeWidth:1 ,
+            gridLineColor: '#eee',
+            hideHover: true,
+            behaveLikeLine: true,
+            barColors:['rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)']
+
+
+        }
+    )
+
+    Morris.Bar(
+        {
+            element: 'sbar-chart',
+            data: [
+                {
+                    year:'2011',target:200,achievement: 100,
+                },
+                {
+                    year:'2012',target:300,achievement: 200,
+                },
+                {
+                    year:'2013',target:100,achievement: 200,
+                },
+                {
+                    year:'2014',target:200,achievement: 300,
+                },
+                {
+                    year:'2015',target:500,achievement: 400,
+                }
+
+
+            ],
+            xkey: 'year',
+            ykeys:['target','achievement'],
+            labels:['Target','Achiement'],
+            parseTime: true,
+            eventStrokeWidth: 2,
+            resize: true,
+            lineWidth:1,
+            pointSize:4,
+            gridTextColor: '#aaa',
+            gridStrokeWidth:1 ,
+            gridLineColor: '#eee',
+            hideHover: true,
+            behaveLikeLine: true,
+            stacked:true,
+            barColors:['rgba(153, 102, 255, 1)','rgba(75, 192, 192, 1)'],
+
+
+        }
+    )
+
+    Morris.Donut(
+        {
+            element: 'donut-chart',
+            data: [
+                {
+                    label:'Android',value: 2000,
+                },
+                {
+                    label:'iOs',value: 1000
+                },
+                {
+                    label:'Chrome OS',value: 200
+                },
+                {
+                    label:'Symbian',value: 100
+                },
+
+
+
+            ],
+            resize: true,
+            colors:['rgba(153, 102, 255, 1)','rgba(75, 192, 192, 1)','rgba(255, 206, 86, 1)','rgba(54, 162, 235, 1)','rgba(255, 159, 64, 1)'],
+
+        }
+    )
+
+});
+</script>
+
+</body>
+</html>

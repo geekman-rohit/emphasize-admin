@@ -1,0 +1,72 @@
+.fc-toolbar.fc-header-toolbar {
+    padding: 1.5em 2em;
+    padding-top: 6em;
+    color: #fff;
+    background-color: map-get($primary,base);
+    margin-bottom: 0;
+    button {
+        background: none;
+        color: #fff;
+        box-shadow: $box-shadow-mini;
+        border: none;
+        padding: 0.9em 2em;
+        height: 2.8em;
+        line-height: 1;
+        background-color: rgba(255,255,255,0);
+        border-radius: 0px;
+        text-transform: capitalize;
+        font-family: $font-family-base;
+        text-shadow: none;
+        &:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+    }
+}
+.fc-left {
+
+    h2 {
+        font-size: 1.7em;
+        line-height: (2.8/1.7);
+
+    }
+}
+table {
+    .fc-head,.fc-body {
+        .fc-widget-header,.fc-widget-content {
+            td,th {
+                padding: 0.5em 0.1em;
+            }
+        }
+
+    }
+}
+.fc-widget-content {
+    .fc-day-grid {
+        .fc-day-number {
+            padding: 0.8em;
+        }
+    }
+}
+.fc-month-view {
+    >table,  {
+        border-left:none !important;
+        >thead,>tbody  {
+            >tr {
+                >td {
+                    border-left:none !important;
+                    border-right:none !important;
+                }
+            }
+        }
+
+    }
+}
+.fc-event-container {
+
+}
+.fc-event,.fc-event-dot {
+    border-radius: 0;
+    padding: 0.3em;
+    background-color: map-get($info,base);
+
+}

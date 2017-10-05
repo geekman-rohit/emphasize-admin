@@ -1,0 +1,127 @@
+
+.fontawesome-icon-list {
+    div {
+        padding: 1em 1.5em;
+
+        .fa {
+            font-size: 1.2em;
+            margin-right: 0.4em;
+        }
+        &:hover {
+            background-color: $bgcolor-base;
+            cursor: pointer;
+
+        }
+    }
+}
+
+#icons {
+    .page-header {
+        border-bottom: 0;
+    }
+}
+.mid-icons {
+    #icons {
+        div {
+            display: inline-block;
+            width: 25%;
+            padding: 1.2em;
+        }
+    }
+}
+.oi {
+    font-size: 0.9em;
+}
+
+#oi-icons {
+    div {
+        display: inline-block;
+        width: 25%;
+        padding: 1.2em;
+        .oi {
+            font-size: 1.1em;
+            margin-right: 0.2em;
+        }
+    }
+}
+
+.sidebar-theming-heading {
+    padding: 1.5em 1.5em;
+
+}
+.sidebar-theming-body {
+    padding: 0.5em 1.5em 0.5em 1.5em;
+}
+.sidebar-theming-section {
+    margin-bottom: 2em ;
+}
+.nav.nav-tabs.sidebar-theming {
+
+    border: none;
+    margin-bottom: 4px;
+    li {
+        border: none;
+        margin-right: 1em;
+        a {
+            padding: 1px;
+
+            border: none;
+            border-radius: 2px;
+
+            display: block;
+            padding: 0;
+            opacity: 0.9;
+            width: 1.8em;
+            height: 1.8em;
+            line-height: 1.6em;
+            background-color: #eee;
+            text-align: center;
+            color: #333;
+            box-shadow: $box-shadow-small;
+            .fa,.mdi,.oi {
+                font-size: 0.8em;
+                display: none;
+
+            }
+            &.active {
+                .fa,.mdi,.oi {
+
+                    display: inline;
+
+                }
+            }
+            &:hover {
+
+                opacity: 1;
+                box-shadow: $box-shadow-large;
+            }
+            &.dark {
+                background: #282F39;
+
+                color: white;
+
+            }
+            &.info {
+                background-color: map-get($info,base);
+
+                color: white;
+
+
+            }
+            &.primary {
+                background-color: map-get($primary,base);
+
+                color: white;
+
+
+            }
+            &.success {
+                background-color: map-get($success,base);
+
+                color: white;
+
+
+            }
+        }
+    }
+}

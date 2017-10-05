@@ -1,0 +1,279 @@
+/* * * * * * * * * *
+* Navigation Styling
+*
+* tabs, navs, navbars
+*
+* * * * * * * * * */
+
+
+// ---------------Mixins--------------- //\
+
+
+// ---------------Styles--------------- //
+.tab-pane {
+    @include font-size(1);
+    padding: 1.2em;
+}
+.nav-tabs {
+    @include font-size(1);
+    li {
+        a {
+            font-weight: 600;
+            color: #444;
+            padding: 0.6em 1em;
+            font-size: 1em;
+            border-radius: 0;
+            margin-right: 0;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+
+    }
+
+}
+.nav-tabs.nav-tabs-material {
+    @include font-size(1);
+    border-bottom: 0;
+    border-bottom: 1px solid #ddd;
+    li {
+
+        border-bottom: 1px solid #ddd;
+        a {
+            font-weight: 600;
+            color: #444;
+            padding: 0.6em 1em;
+            font-size: 1em;
+            border-radius: 0;
+            margin-right: 0;
+            border: 0;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                background:none;
+
+            }
+        }
+        &:hover {
+
+        }
+        &.active {
+
+            border-bottom: 1px solid $blue;
+            a {
+                border: 0;
+                border-bottom: 1px solid $blue;
+                &:hover, &:focus,&:active {
+
+                }
+            }
+        }
+
+    }
+
+}
+.nav-pills{
+    @include font-size(1);
+    li {
+        a {
+            font-weight: 600;
+            color: #444;
+            padding: 0.6em 1em;
+            font-size: 1em;
+            border-radius: 0;
+            margin-right: 0;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+        &.active {
+            a {
+                background-color: $blue;
+                &:hover, &:focus,&:active {
+                background-color: $blue;
+                }
+            }
+        }
+    }
+
+}
+// Main Navigation Styling
+
+.main-nav {
+    // Font
+    font-family: $font-family-accent;
+    font-size: 1em;
+
+    // Box Size
+    display: block;
+    margin:0;
+    padding: 0;
+
+    //Children
+    >li {
+        >a {
+          width: $sidebar-size;
+          overflow: hidden;
+        }
+    }
+    li {
+        // Styling for Main List Item
+
+        // Box Size
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: block;
+
+        a {
+            // Box Size
+
+            padding: 1.1em 1.2em 1.1em 0;
+            white-space: nowrap;
+            display: block;
+            position: relative;
+            &:hover,&:focus,&:active {
+                text-decoration: none;
+            }
+            i {
+                // Font
+                font-size: 1.0em;
+                // Box Size
+                display: inline-block;
+                margin: 0em 1em 0em 1.2em;
+                padding: 0em 0em 0.1em 0em;
+                //width:$sidebar-mini-size;
+                display: inline-block;
+                text-align: center;
+            }
+            .label {
+              float: right;
+            }
+
+        }
+        &.main-nav-label {
+            border-top: 1px solid $separator-color;
+            margin-top: 0.5em;
+            opacity: 1;
+            transition: 1s all;
+            transition-timing-function:cubic-bezier(0.4, 0.0, 0.2, 1);
+            overflow: hidden;
+
+        }
+        &.main-nav-label span {
+
+
+            font-size: 0.9em;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #888;
+            padding: 1.6em 1.7em 1.2em;
+            display: block;
+            white-space: nowrap;
+
+
+
+        }
+        &.main-nav-label:first-child{
+            border-top: 0;
+        }
+    }
+
+    ul {
+        // Styling for nested Nav List
+
+        // Box Size
+        margin: 0;
+        padding: 0;
+
+        // Animations
+
+
+        //height:0;
+
+
+        // Children
+        li {
+            a {
+                padding: 0.9em 1.3em 0.8em 4em;
+            }
+            &:last-child {
+                a {
+                    padding-bottom: 1em;
+                }
+            }
+        }
+
+    }
+
+    .menu-caret {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 3em;
+        text-align: center;
+        line-height: inherit;
+        font-size: 1.1em;
+        &::before {
+            content: "\F142";
+            font-family: "Material Design Icons";
+            font-size: 1.3em;
+            position: relative;
+            bottom:0.15em;
+
+        }
+
+    }
+    li.active > a > .menu-caret {
+        &::before {
+            content: "\F140";
+            font-family: "Material Design Icons";
+            font-size: 1.3em;
+
+        }
+    }
+
+}
+
+
+.horizontal-nav {
+    // Font
+    font-family: $font-family-accent;
+    @include clearfix;
+    // Box Size
+    display: block;
+    margin:0;
+    padding: 0;
+
+    border-top: 1px solid $separator-color;
+    //Children
+    li {
+        // Styling for Main List Item
+
+        // Box Size
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: inline-block;
+            width: 33%;
+            float:left;
+        a {
+            // Box Size
+            padding: 0.5em 0.2em 0.5em 0.2em;
+            display: block;
+            color: #333;
+            text-align: center;
+            font-size: 1.3em;
+            &:hover,&:focus,&:active {
+                text-decoration: none;
+
+            }
+            .mdi {
+                // Font
+                &::before {
+                }
+
+            }
+
+        }
+    }
+}

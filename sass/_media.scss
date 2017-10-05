@@ -1,0 +1,226 @@
+/* * * * * * * * * *
+* Media and Thumbnails Styling
+*
+* * * * * * * * * */
+.img-thumb {
+    @include font-size(1);
+    width: 10em;
+}
+.img-thumb-nm {
+    @include font-size(1);
+    width: 6em;
+}
+.img-thumb-sm {
+    @include font-size(1);
+    width: 4.8em;
+}
+.img-thumb-xs {
+    @include font-size(1);
+    width: 3.2em;
+}
+.img-thumb-xxs {
+    @include font-size(1);
+    width: 2.5em;
+
+}
+.img-thumb-lg {
+    @include font-size(1);
+    width: 13em;
+}
+
+
+.media.align-middle {
+    .media-left {
+        vertical-align: middle;
+    }
+
+    vertical-align: middle;
+}
+.media-body {
+    padding-left: 1em;
+}
+
+.media-left {
+    padding: 0em 0.5em;
+
+    > .fa,.fa-stack {
+        margin: 0;
+    }
+    &.no-padding {
+        padding: 0;
+    }
+}
+.media-success {
+    background-color: map-get($success,base);
+    color: white;
+}
+.media-info {
+    background-color: map-get($info,base);
+    color: white;
+}
+.media-primary {
+    background-color: map-get($primary,base);
+    color: white;
+}
+.media-warning {
+    background-color: map-get($warning,base);
+    color: white;
+}
+.media-danger {
+    background-color: map-get($danger,base);
+    color: white;
+}
+.media-dark {
+    background-color: #445566;
+    color: white;
+}
+.media-right {
+
+}
+.media-body {
+    padding: 0em 0.8em;
+}
+.media-full {
+  padding: 0.2em;
+}
+.media-user {
+    margin: 0;
+    padding: 0;
+    color: $link-color;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+
+}
+.media-raised {
+    box-shadow: $box-shadow-mini;
+    border-radius: 4px;
+}
+.img-thumb {
+    &.media-raised {
+        display: block;
+        box-shadow: $box-shadow-mini;
+    }
+}
+.img-circle {
+    &.media-raised {
+        display: block;
+        box-shadow: $box-shadow-mini;
+        border-radius: 50%;
+    }
+}
+
+.media-user-inline {
+  color: $link-color;
+}
+.media-content {
+
+    margin-bottom: 0;
+    margin-top: 0em;
+    //font-size: 0.95em;
+
+    &.media-content-small {
+        font-size: 0.9em;
+    }
+}
+.media-title {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+.rounded-icon {
+    @include font-size(1);
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    line-height: 3;
+    background: $bgcolor-faded;
+    color: $color-base;
+    border-radius: 50%;
+    .fa,.mdi {
+
+      margin: 0;
+
+    }
+    .mdi {
+      &::before {
+        position: relative;
+        bottom: 0.3em;
+      }
+    }
+    &.rounded-icon-mini {
+        @include font-size(0.8);
+    }
+    &.rounded-icon-lg {
+        @include font-size(1.7);
+    }
+    &.round-icon-xlg {
+        @include font-size(2.2);
+    }
+    &.rounded-icon-success {
+        background-color: map-get($success,base);
+        color: white;
+    }
+    &.rounded-icon-info {
+        background-color: map-get($info,base);
+        color: white;
+    }
+    &.rounded-icon-primary {
+        background-color: map-get($primary,base);
+        color: white;
+    }
+    &.rounded-icon-warning {
+        background-color: map-get($warning,base);
+        color: white;
+    }
+    &.rounded-icon-danger {
+        background-color: map-get($danger,base);
+        color: white;
+    }
+}
+.square-icon {
+
+    width: 3em;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    display: inline-block;
+    @include font-size(1);
+    &.square-icon-success {
+        background-color: map-get($success,base);
+        color: white;
+    }
+    &.square-icon-info {
+        background-color: map-get($info,base);
+        color: white;
+    }
+    &.square-icon-primary {
+        background-color: map-get($primary,base);
+        color: white;
+    }
+    &.square-icon-warning {
+        background-color: map-get($warning,base);
+        color: white;
+    }
+    &.square-icon-danger {
+        background-color: map-get($danger,base);
+        color: white;
+    }
+    &.square-icon-dark {
+        background-color: #445566;
+        color: white;
+    }
+    &.square-icon-lg {
+        @include font-size(1.7);
+    }
+    &.square-icon-xlg {
+        @include font-size(2.2);
+    }
+    &.square-icon-mini {
+        @include font-size(0.7);
+    }
+    &.square-icon-xs {
+        @include font-size(0.4);
+    }
+}

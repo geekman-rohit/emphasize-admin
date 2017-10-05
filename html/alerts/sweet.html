@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Sweet Alert
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li class="active">SweetAlert</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>SweetAlert 2</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    <p>
+                                        Sweet Alerts is a beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes
+                                    </p>
+                                </div>
+                                <div class="demo-elements">
+                                    <button class="btn btn-info sweetalert1">Try a SweetAlert</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script>
+$(function(){
+    $('.sweetalert1').click(function(){
+        swal(
+          'See',
+          'SweetAlert is useful!',
+          'success'
+      );
+    })
+})
+
+</script>
+</body>
+</html>

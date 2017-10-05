@@ -1,0 +1,86 @@
+/* * * * * * * * * *
+* Label Styling
+*
+* * * * * * * * * */
+.label {
+    font-size: 0.9em;
+    padding: 0.5em 1em 0.5em;
+    vertical-align: middle;
+    display: inline-block;
+    font-family: $font-family-base;
+    font-weight: 500;
+    line-height: 1.2;
+    border: 0px solid #aaa;
+    border-radius: 1px;
+    margin-right: 0.5em;
+    vertical-align: middle;
+    &.label-short {
+        padding: 0.15em 0.7em 0.17em;
+    }
+    &.label-default {
+        background-color: #777;
+        border-color: #555;
+    }
+    &.label-primary {
+        background-color: map-get($primary, base);
+        border-color: map-get($primary, dark);
+    }
+    &.label-info {
+        background-color: map-get($info, base);
+        border-color: map-get($info, dark);
+    }
+    &.label-warning {
+        background-color: map-get($warning, base);
+        border-color: map-get($warning, dark);
+    }
+    &.label-danger {
+        background-color: map-get($danger, base);
+        border-color: map-get($danger, dark);
+    }
+    &.label-success {
+        background-color: map-get($success, base);
+        border-color: map-get($success, dark);
+    }
+    &.label-white {
+        background-color: #ddd;
+        color: #333;
+    }
+    &.label-chip {
+        border-radius: 2em;
+    }
+}
+
+/* * * * * * * * * *
+* Badge Styling
+*
+* * * * * * * * * */
+.badge {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    padding: 0.3em 0.6em 0.3em 0.6em;
+    margin-left: 0.2em;
+    text-align: center;
+    &.badge-round {
+        display: inline-block;
+        box-sizing: content-box;
+        height: 1.6em;
+        line-height: 1.5;
+        width: 1.6em;
+        padding: 0;
+        text-align: center;
+        border-radius:50%;
+    }
+    &.badge-round-large {
+        font-size: 0.8em;
+        display: inline-block;
+        box-sizing: content-box;
+        height: 2.2em;
+        line-height: 2.2;
+        width: 2.2em;
+        padding: 0;
+        text-align: center;
+        border-radius:50%;
+    }
+}

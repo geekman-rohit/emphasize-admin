@@ -1,0 +1,118 @@
+/* * * * * * *
+* Table Styling
+*
+* * * * * * */
+
+// ---------------Variables--------------- //
+
+$table-padding-base: 1em 1.5em;
+$table-padding-condensed: 0.4em 0.8em;
+$table-padding-large: 1em 1.3em;
+$table-color-heading: $color-dimmed;
+
+// ---------------Styling--------------- //
+.table {
+    @include font-size(1);
+    border-color: $separator-color;
+    thead,tbody,tfoot {
+        tr {
+            th {
+                color: $table-color-heading;
+            }
+            td,th {
+                padding: $table-padding-base;
+
+                border-bottom-width: 1px;
+                border-color: $separator-color;
+            }
+        }
+
+    }
+
+
+    tbody,thead,tfoot {
+        tr.success td,tr td.success {
+            background-color: map-get($success,faded);
+        }
+        tr.warning td,tr td.warning {
+            background-color: map-get($warning,faded);
+        }
+        tr.info td,tr td.info {
+            background-color: map-get($info,faded);
+        }
+        tr.danger td,tr td.danger {
+            background-color: map-get($danger,faded);
+        }
+        tr.primary td,tr td.primary {
+            background-color: map-get($primary,faded);
+        }
+        tr.active td,tr td.active {
+            background-color: map-get($grey,faded);
+        }
+    }
+    &.table-condensed {
+        thead,tbody,tfoot {
+            tr {
+
+                td,th {
+                    padding: $table-padding-condensed;
+                }
+            }
+
+        }
+    }
+
+    &.table-align-middle {
+        thead,tbody,tfoot {
+            tr {
+
+                td,th {
+                    vertical-align: middle;
+                }
+            }
+
+        }
+    }
+    &.padding-large {
+        thead,tbody,tfoot {
+            tr {
+
+                td,th {
+                    padding: $table-padding-large;
+                }
+            }
+
+        }
+    }
+    &.table-striped {
+        > tbody {
+            > tr:nth-of-type(odd) {
+                background-color: $bgcolor-faded;
+            }
+        }
+    }
+    &.table-hover {
+        tbody {
+            >tr {
+              transition: 0.5s background-color;
+              transition-timing-function:cubic-bezier(0.4, 0.0, 0.2, 1);
+              &:hover {
+                  background-color: $bgcolor-faded;
+              }
+            }
+        }
+    }
+    &.table-noborders {
+        thead,tbody,tfoot {
+            tr {
+
+                td,th {
+                    border: none;
+                }
+            }
+
+        }
+    }
+
+
+}

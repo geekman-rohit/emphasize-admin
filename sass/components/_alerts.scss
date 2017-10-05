@@ -1,0 +1,99 @@
+/* * * * * * * * * *
+* Alerts Styling
+*
+* * * * * * * * * */
+// ---------------Alert Variables--------------- //
+$alert-padding-base: 0.75em 1em;
+
+// ---------------Mixins--------------- //
+
+// Mixin to generate Color Variation for default alert
+@mixin alert-variation($palette) {
+    background-color: map-get($palette,faded);
+    border-color: map-get($palette,base);
+    color: map-get($palette,dark);
+}
+// Mixin to generate Color Variation for bold alert
+@mixin alert-bold-variation($palette) {
+    background-color: map-get($palette,base);
+    color: white;
+}
+
+
+
+// ---------------Style--------------- //
+.alert {
+    @include font-size(1);
+    padding: $alert-padding-base;
+    border-radius: 0;
+    border: 1px solid #eee;
+    &.alert-success {
+        @include alert-variation($success);
+    }
+    &.alert-warning {
+        @include alert-variation($warning);
+    }
+    &.alert-info {
+        @include alert-variation($info);
+    }
+    &.alert-danger {
+        @include alert-variation($danger);
+    }
+    &.alert-dissmissable {
+        button {
+            color: inherit;
+            font-size: 1em;
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+            span {
+                font-size: 1em;
+            }
+        }
+    }
+    .alert-link {
+        font-weight: bold;
+        color: inherit;
+    }
+}
+
+.alert-bold {
+    @include font-size(1);
+    box-shadow: $box-shadow-mini;
+    $alert-padding-base: 0.75em 1em;
+    border-radius: 0;
+    &.alert-success {
+        @include alert-bold-variation($success);
+    }
+    &.alert-warning {
+        @include alert-bold-variation($warning);
+    }
+    &.alert-info {
+        @include alert-bold-variation($info);
+    }
+    &.alert-danger {
+        @include alert-bold-variation($danger);
+    }
+
+}
+.close {
+    line-height: 1.4;
+}
+
+.modal-content {
+    box-shadow: $box-shadow-large;
+    border-radius: 4px;
+}
+.modal-header ,.modal-body,.modal-footer {
+    padding: 1em 1.5em;
+}
+.toast-top-right,.toast-top-left {
+    top: 5em;
+}
+.toast-warning {
+    background-color: map-get($warning,base);
+}
+.toast-info {
+    background-color: map-get($info,base);
+}

@@ -1,0 +1,144 @@
+.ct-series-a .ct-line {
+/* Set the colour of this series line */
+stroke: rgba(54, 162, 235, 1);
+/* Control the thikness of your lines */
+stroke-width: 4px;
+/* Create a dashed line with a pattern */
+
+}
+.ct-series-a .ct-point {
+  /* Colour of your points */
+  stroke: rgba(54, 162, 235, 1);
+  /* Size of your points */
+  stroke-width: 6px;
+  /* Make your points appear as squares */
+
+}
+
+
+.ct-series-b .ct-line {
+/* Set the colour of this series line */
+stroke: rgba(255, 99, 132, 1);
+/* Control the thikness of your lines */
+stroke-width: 4px;
+/* Create a dashed line with a pattern */
+
+}
+.ct-series-b .ct-point {
+  /* Colour of your points */
+  stroke: rgba(255, 99, 132, 1);
+  /* Size of your points */
+  stroke-width: 6px;
+  /* Make your points appear as squares */
+
+}
+
+
+
+.ct-series-a .ct-bar {
+  /* Colour of your bars */
+  stroke: rgba(255, 99, 132, 1);
+  /* The width of your bars */
+  stroke-width: 25px;
+}
+.ct-series-b .ct-bar {
+  /* Colour of your bars */
+  stroke: rgba(54, 162, 235, 1);
+  /* The width of your bars */
+  stroke-width: 25px;
+}
+
+
+
+
+
+.ct-series-a .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: rgba(54, 162, 235, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-b .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: rgba(255, 206, 86, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+
+.ct-series-c .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: rgba(75, 192, 192, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-d .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: rgba(153, 102, 255, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-e .ct-slice-pie {
+  /* fill of the pie slieces */
+  fill: rgba(255, 159, 64, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+
+.ct-chart-donut .ct-label {
+  fill: white;
+}
+.ct-chart-pie .ct-label {
+  fill: white;
+}
+
+.ct-series-a .ct-slice-donut, .ct-series-a .ct-slice-donut-solid {
+  /* fill of the pie slieces */
+  fill: rgba(54, 162, 235, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-b .ct-slice-donut, .ct-series-b .ct-slice-donut-solid {
+  /* fill of the pie slieces */
+  fill: rgba(255, 206, 86, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+
+.ct-series-c .ct-slice-donut, .ct-series-c .ct-slice-donut-solid {
+  /* fill of the pie slieces */
+  fill: rgba(75, 192, 192, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-d .ct-slice-donut, .ct-series-d .ct-slice-donut-solid {
+  /* fill of the pie slieces */
+  fill: rgba(153, 102, 255, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}
+.ct-series-e .ct-slice-donut, .ct-series-e .ct-slice-donut-solid {
+  /* fill of the pie slieces */
+  fill: rgba(255, 159, 64, 1);
+  /* give your pie slices some outline or separate them visually by using the background color here */
+  stroke: white;
+  /* outline width */
+  stroke-width: 2px;
+}

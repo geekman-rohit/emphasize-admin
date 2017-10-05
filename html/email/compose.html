@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+<link rel="stylesheet" href="../../bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.min.css">
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <div class="page-content no-padding">
+
+                    <div class="panel panel-default panel-email">
+                        <div class="inbox-container">
+                            <div class="inbox-sidebar">
+                                <div class="inbox-sidebar-btn">
+                                    <h2>
+                                        Inbox
+                                    </h2>
+                                    <button class="btn btn-danger btn-block">
+                                        Compose
+                                    </button>
+                                </div>
+                                <ul class="main-nav email-nav">
+
+                                    <li class="">
+                                        <a href="#">
+
+                                            <i class="mdi mdi-email text-primary"></i><span class="title">Inbox</span>
+
+
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="../ui/widgets.html">
+                                            <span class="label label-primary label-short label-chip">12</span>
+                                            <i class="mdi mdi-star text-warning"></i><span class="title">Important</span>
+
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../ui/forms.html">
+                                            <i class="mdi mdi-inbox text-success"></i><span class="title">Archive</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="mdi mdi-send text-danger"></i><span class="title">Sent</span>
+                                        </a>
+                                    </li>
+
+
+                                    <li>
+                                        <a href="../ui/tables.html">
+                                            <i class="mdi mdi-email-open"></i><span class="title">Drafts</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="">
+                                            <i class="mdi mdi-alert-circle text-danger"></i><span class="title">Spam</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="mdi mdi-contacts text-info"></i><span class="title">Contacts</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-file-text"></i><span class="title">Documentation</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div class="inbox-emails">
+                                <div class="panel-heading">
+                                    <h2>Compose</h2>
+                                </div>
+
+                                <div class="inbox-compose-form">
+                                    <form class="mdform">
+                                      <div class="form-group">
+                                        <label for="form1-email">To</label>
+                                        <input type="email" class="form-control" id="form1-email">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="form1-subject">Subject</label>
+                                        <input type="email" class="form-control" id="form1-subject">
+                                      </div>
+                                      <div class="form-group ">
+                                        <label for="form1-message">Message</label>
+                                        <div class="wysi-textarea-container">
+                                            <textarea class="form-control" id="form1-message"></textarea>
+                                        </div>
+
+
+                                      </div>
+
+
+                                      <!-- /.row -->
+
+
+
+                                    </form>
+                                    <form action="/file-upload"
+                                      class="dropzone"
+                                      id="my-awesome-dropzone">
+
+                                  </form>
+
+                                  <button type="submit" class="btn btn-success"><i class="fa fa-send" style="font-size:0.9em"></i> Send</button>
+                                  <button type="submit" class="btn btn-info"><i class="fa fa-inbox" style="font-size:1em"></i> Archive</button>
+                                  <button type="submit" class="btn btn-danger"><i class="fa fa-times" style="font-size:1em"></i> Discard</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /.row -->
+
+                    </div>
+                    <!-- /.panel-primary panel -->
+
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script src="../../bower_components/dropzone/dist/dropzone.js"></script>
+<script src="../../bower_components/bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.min.js"></script>
+<script>
+    $('#form1-message').wysihtml5();
+</script>
+</body>
+</html>

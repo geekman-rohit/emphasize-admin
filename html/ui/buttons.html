@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Buttons</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+<style>
+    .btn {
+
+    }
+    .demo-elements {
+        padding: 1em 0em 0em;
+    }
+    .demo-section {
+        margin-bottom: 0.5em;
+    }
+    .btn, .btn-group, .btn-group-vertical {
+        margin-right: 0.5rem;
+        margin-bottom:1rem;
+    }
+    .btn-group .btn, .btn-group .btn-group, .btn-group-vertical .btn, .btn-group-vertical .btn-group {
+        margin-right: 0;
+        margin-bottom:0;
+
+    }
+</style>
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Buttons
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">UI</a></li>
+              <li class="active">Buttons</li>
+            </ol>
+        </header>
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Basic Button Colors</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add <code>.btn .btn-primary</code> classes to any <code>button</code> element or link, <code>a</code>, tag to quickly create a styled default button
+                                    </div>
+                                    <div class="demo-elements" style="padding-bottom:1em">
+                                        <button class="btn btn-primary">
+                                            PRIMARY
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Change <code>btn-primary</code> to any of the other bootstrap button classes to change its base color
+                                    </div>
+                                    <div class="demo-elements">
+
+
+                                        <button class="btn btn-primary">
+                                            PRIMARY
+                                        </button>
+                                        <button class="btn btn-warning">
+                                            WARNING
+                                        </button>
+                                        <button class="btn btn-info">
+                                            INFO
+                                        </button>
+                                        <button class="btn btn-success">
+                                            SUCCESS
+                                        </button>
+                                        <button class="btn btn-danger">
+                                            DANGER
+                                        </button>
+                                        <button class="btn btn-default">
+                                            DEFAULT
+                                        </button>
+                                        <button class="btn btn-link">
+                                            LINK
+                                        </button>
+                                        </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Button Sizes</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add <code>.btn-xs</code> for extra small buttons, <code>.btn-sm</code> for small, <code>.btn-lg</code> for large buttons
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-xs">
+                                            BUTTON xs
+                                        </button>
+                                        <button class="btn btn-warning btn-sm">
+                                            BUTTON sm
+                                        </button>
+                                        <button class="btn btn-info">
+                                            BUTTON
+                                        </button>
+                                        <button class="btn btn-success btn-lg">
+                                            BUTTON lg
+                                        </button>
+                                    </div>
+
+                                <div class="demo-details">
+                                    Change <code>font-size</code> of a button to generate your own size
+                                </div>
+                                <div class="demo-elements">
+
+                                    <button class="btn btn-success" style="font-size:1.1em">
+                                        BUTTON
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>
+                                    Pill Buttons
+                                </h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add <code>.btn-pill</code> class to convert buttons to a pill style
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-pill">
+                                            PRIMARY
+                                        </button>
+                                        <button class="btn btn-warning btn-pill">
+                                            WARNING
+                                        </button>
+                                        <button class="btn btn-info btn-pill">
+                                            INFO
+                                        </button>
+                                        <button class="btn btn-success btn-pill">
+                                            SUCCESS
+                                        </button>
+                                        <button class="btn btn-danger btn-pill">
+                                            DANGER
+                                        </button>
+                                        <button class="btn btn-default btn-pill">
+                                            DEFAULT
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Outline Buttons</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add a <code>.btn-outline</code> class for buttons with only outline
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-box">
+                                            PRIMARY
+                                        </button>
+                                        <button class="btn btn-warning btn-box">
+                                            WARNING
+                                        </button>
+                                        <button class="btn btn-info btn-box">
+                                            INFO
+                                        </button>
+                                        <button class="btn btn-success btn-box">
+                                            SUCCESS
+                                        </button>
+                                        <button class="btn btn-danger btn-box">
+                                            DANGER
+                                        </button>
+                                        <button class="btn btn-default btn-box">
+                                            DEFAULT
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+                    </div>
+                    <!-- /.col-md-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Round buttons</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add a <code>.btn-round</code> class to a button to generate a round button.
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-round">
+                                            <i class="fa fa-facebook"></i>
+                                        </button>
+                                        <button class="btn btn-warning btn-round">
+                                            <i class="fa fa-info"></i>
+                                        </button>
+                                        <button class="btn btn-info btn-round">
+                                            <i class="fa fa-upload"></i>
+                                        </button>
+                                        <button class="btn btn-success btn-round">
+                                            <i class="fa fa-download"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-round">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                        <button class="btn btn-default btn-round">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+                    </div>
+                    <!-- /.col-md-6 -->
+
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Icon Only Buttons</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Add a <code>.btn-icon</code> class to better style buttons with just a icon.
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-icon">
+                                            <i class="fa fa-facebook"></i>
+                                        </button>
+                                        <button class="btn btn-warning btn-icon">
+                                            <i class="fa fa-info"></i>
+                                        </button>
+                                        <button class="btn btn-info btn-icon">
+                                            <i class="fa fa-upload"></i>
+                                        </button>
+                                        <button class="btn btn-success btn-icon">
+                                            <i class="fa fa-download"></i>
+                                        </button>
+                                        <button class="btn btn-danger btn-icon">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                        <button class="btn btn-default btn-icon">
+                                            <i class="fa fa-cog"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+
+                                <h2>Buttons With Dropdown</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Create button dropdowns by using standard bootstrap button syntax - <code>.dropdown</code>
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Dropdown
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Change <code>.dropdown</code> to <code>.dropup</code> to create a menu that drops above the button
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="dropup">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                Dropup
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        You can also use icon only button for dropdown
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="dropdown">
+                                            <button class="btn btn-danger btn-icon dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <i class="fa fa-download"></i>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>
+                                    Full Width Buttons
+                                </h2>
+                            </div>
+                            <!-- /.panel-heading -->
+
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Default Block Buttons <code>.btn-block</code>
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-block">
+                                            <i class="fa fa-facebook"></i> Login With Facebook
+                                        </button>
+                                    </div>
+                                </div>
+
+
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Pill/Outline Block Buttons <code>.btn-block .btn-pill</code>
+                                    </div>
+                                    <div class="demo-elements">
+                                        <button class="btn btn-primary btn-block btn-pill">
+                                            <i class="fa fa-facebook"></i> Login With Facebook
+                                        </button>
+                                        <br>
+                                        <button class="btn btn-danger btn-block btn-box">
+                                            <i class="fa fa-google"></i> Login With Google
+                                        </button>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel panel-default -->
+
+                    </div>
+                    <!-- /.col-lg-6 -->
+
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2>Button Groups</h2>
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Create a button group by wrapping buttons inside a division with <code>.btn-group</code> class
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="btn-group" role="group" aria-label="...">
+                                          <button type="button" class="btn btn-success">Left</button>
+                                          <button type="button" class="btn btn-success">Middle</button>
+                                          <button type="button" class="btn btn-success">Right</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Make a button group of full length by adding a  <code>.btn-group-justified</code> class
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                          <a class="btn btn-default">Left</a>
+                                          <a class="btn btn-default">Middle</a>
+                                          <a class="btn btn-default">Right</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        To add a dropdown menu use a nested button group
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">1</button>
+                                            <button type="button" class="btn btn-default">2</button>
+
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Dropdown
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        You can also use outline only buttons in button groups
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="btn-group btn-group-box" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-primary btn-box">1</button>
+                                            <button type="button" class="btn btn-primary btn-box">2</button>
+
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-primary btn-box dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Dropdown
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-section">
+                                    <div class="demo-details">
+                                        Create a vertical button group by using <code>.btn-group-vertical</code> class.
+                                    </div>
+                                    <div class="demo-elements">
+                                        <div class="btn-group-vertical" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default btn-primary">Button 1</button>
+                                            <button type="button" class="btn btn-default btn-primary">Button 2</button>
+
+                                            <div class="btn-group" role="group">
+                                                <button type="button" class="btn btn-default btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Dropdown
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                    <li><a href="#">Dropdown link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-md-6 -->
+
+                </div>
+                <!-- /.row -->
+
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /.page-content -->
+</div>
+<!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+</body>
+</html>

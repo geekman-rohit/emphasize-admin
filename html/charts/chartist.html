@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Chartist Charts
+            </h2>
+            <ol class="breadcrumb">
+                 <li class=""><a href="">Charts</a></li>
+                 <li class="active">Chartist</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h2>Line Chart</h2>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+
+                        <div id="line-chart"></div>
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+
+            </div>
+            <!-- /.col-md-6 -->
+
+
+            <div class="col-md-6">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h2>Bar Chart</h2>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+
+                        <div id="bar-chart"></div>
+
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+
+            </div>
+            <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Pie Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="pie-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-md-6 -->
+
+
+                <div class="col-md-6">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Donut Chart</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="donut-chart"></div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script>
+$(function(){
+    var options = {
+      height: 400,
+
+    };
+    var data = {
+
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+
+        series: [
+            {
+                name: 'series-1',
+                data:[5, 2, 4, 2, 0],
+            },
+            {
+                name: 'series-2',
+                data: [7, 4, 2, 1, 4],
+            }
+
+        ]
+    };
+
+    new Chartist.Line('#line-chart', data,options);
+
+    var options = {
+      height: 400,
+      seriesBarDistance: 30,
+
+    };
+    var data = {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        series: [
+            {
+                name: 'series-1',
+                data:[5, 2, -4, 2, 6],
+            },
+            {
+                name: 'series-2',
+                data: [7, -4, 2, 1, -4],
+            }
+
+        ]
+    };
+
+    new Chartist.Bar('#bar-chart', data,options);
+
+    var options = {
+      height: 400,
+      donut: true,
+      donutWidth: 100,
+      donutSolid: true,
+    };
+    var data = {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+
+        series: [5, 2, 4, 2, 6],
+
+    };
+
+    new Chartist.Pie('#donut-chart', data,options);
+
+    var options = {
+      height: 400,
+    };
+    var data = {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+        series: [5, 2, 4, 2, 6],
+
+    };
+
+    new Chartist.Pie('#pie-chart', data,options);
+})
+
+</script>
+
+</body>
+</html>

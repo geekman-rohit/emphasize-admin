@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Other Small Chart Libraries
+            </h2>
+            <ol class="breadcrumb">
+                 <li class=""><a href="">Charts</a></li>
+                 <li class="active">Other Charts</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>jQuery Sparkline</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    Create Quick and Small Inline Line Charts Charts
+                                     <span class="inline-sparkline">
+                                        1, 2, 4, 10,2,11,5,6,10, 12, 4, 10,2,11,5,6,1, 2, 4, 10,2,11,5,6
+                                    </span>
+                                </div>
+                                <!-- /.demo-details -->
+                                <div class="demo-elements">
+
+                                </div>
+                                <!-- /.demo-elements -->
+                            </div>
+                            <!-- /.demo-section -->
+
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    You can also use a bar chart
+                                     <span class="bar-sparkline">
+                                        1, 2, 4, 10,2,11,5,6,10, 12, 4, 10,2,11,5,6,1, 2, 4, 10,2,11,5,6
+                                    </span>
+                                </div>
+                                <!-- /.demo-details -->
+                                <div class="demo-elements">
+
+                                </div>
+                                <!-- /.demo-elements -->
+                            </div>
+                            <!-- /.demo-section -->
+
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    Inline Pie Chart
+                                     <span class="pie-sparkline">
+                                        4, 10,12,11,
+                                    </span>
+                                </div>
+                                <!-- /.demo-details -->
+                                <div class="demo-elements">
+
+                                </div>
+                                <!-- /.demo-elements -->
+                            </div>
+                            <!-- /.demo-section -->
+
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    Bullet Chart
+                                     <span class="bullet-sparkline">
+                                        4, 10,12,11,
+                                    </span>
+                                </div>
+                                <!-- /.demo-details -->
+                                <div class="demo-elements">
+
+                                </div>
+                                <!-- /.demo-elements -->
+                            </div>
+                            <!-- /.demo-section -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Easy Pie Charts</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-elements">
+                                    <div class="easy-pie-chart easy-pie-chart-default pull-left" data-percent="73">
+                                        <span>73%</span>
+                                    </div>
+
+                                        <div class="easy-pie-chart easy-pie-chart-primary pull-left" data-percent="37">
+                                            <span>37%</span>
+                                        </div>
+
+                                        <div class="easy-pie-chart easy-pie-chart-success pull-left" data-percent="90">
+                                            <span>97%</span>
+                                        </div>
+
+                                        <div class="easy-pie-chart easy-pie-chart-danger pull-left" data-percent="27">
+                                            <span>27%</span>
+                                        </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-md-12 -->
+            </div>
+            <!-- /.row -->
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script src="../../external/jquery.sparkline.js"></script>
+<script>
+    $(function(){
+        $('.inline-sparkline').sparkline();
+        $('.bar-sparkline').sparkline('html',{type:'bar'});
+        $('.pie-sparkline').sparkline('html',{type:'pie'});
+        $('.bullet-sparkline').sparkline('html',{type:'bullet'});
+    })
+</script>
+
+<script type="text/javascript">
+$(function() {
+    $('.easy-pie-chart-default').easyPieChart({
+        barColor: warningColor.base,
+    });
+    $('.easy-pie-chart-primary').easyPieChart({
+        scaleColor: false,
+        barColor: primaryColor.base,
+    });
+    $('.easy-pie-chart-success').easyPieChart({
+        scaleColor: false,
+        barColor: successColor.base,
+    });
+    $('.easy-pie-chart-danger').easyPieChart({
+        scaleColor: false,
+        barColor: dangerColor.base,
+    });
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+.panel-email {
+    box-shadow: none;
+    background: transparent;
+
+
+}
+.inbox-container {
+    @include clearfix;
+}
+.inbox-sidebar {
+    padding: 1em 1em;
+    width: 18rem;
+    color: $color-faded;
+    min-height: 100vh;
+    .inbox-sidebar-btn {
+        padding: 1em;
+    }
+    float: left;
+
+    border-right: 1px solid #eee;
+}
+.inbox-emails {
+    background: white;
+    min-height: 100vh;
+}
+.email-nav.main-nav {
+
+    a {
+        width: 100%;
+        color: $color-faded;
+        font-weight: 500;
+
+        &:hover {
+            color: $color-base;
+        }
+    }
+    li a {
+        span.label {
+
+        }
+    }
+}
+.email-sections {
+    @include clearfix;
+    display: table-row;
+    width: 100%;
+}
+.inbox-emails {
+    position: relative;
+    left: -1px;
+    margin-left: 18rem;
+    border-left: 1px solid #eee;
+
+}
+.inbox-actions {
+    padding: 1.5em;
+}
+.emails {
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    display: table;
+    width: 100%;
+    .email {
+
+        display: table-row;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding: 1em;
+        padding-right: 2em;
+        position: relative;
+        height: 4em;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        color: $color-dimmed;
+        &.unread {
+            font-weight: 600;
+            color: $color-base;
+            background-color: #f5f5f5;
+        }
+        &:hover {
+            background-color: #f3f3f3;
+
+        }
+        .email-section {
+            display: table-cell;
+            line-height: 2em;
+            vertical-align: middle;
+        }
+        .email-actions-left {
+            width: 4.6em;
+            padding-left: 1.6em;
+            text-align: left;
+        }
+        .email-sender {
+            width: 20em;
+            text-align: left;
+
+        }
+        .email-left {
+
+            display: table-row;
+        }
+        .email-right {
+
+            display: table-row;
+        }
+        .email-details {
+            color: $color-faded;
+            font-size: 0.8em;
+            padding-top: 0.4em;
+            padding-right: 2em;
+            width: 7em;
+        }
+        .email-subject {
+
+
+        }
+    }
+}
+.inbox-compose-form {
+    padding: 0em 2em 2em;
+    textarea.form-control {
+        border:1px solid #ddd;
+        margin-top: 1em;
+        height: 13em;
+        resize: none;
+        &:focus {
+            border: 2px solid map-get($info,base);
+        }
+    }
+}
+.dropzone {
+    width: 100%;
+    height: 7em;
+    padding-top: 2.8em;
+    text-align: center;
+    border: none;
+    margin-bottom: 2em;
+    cursor:pointer;
+    background-color: #f5f5f5;
+    border: 1px dashed #aaa;
+    &:hover {
+        background-color: #eee;
+    }
+}
+.wysihtml5-toolbar {
+    position: absolute;
+    left:2px;
+    top:2px;
+    width: 100%;
+    height: 3.1em;
+    padding: 0em;
+
+    border-bottom: 1px solid #ddd;
+    li:first-child>.btn,>.btn-group {
+
+            border-left-width: 0px;
+
+    }
+    li>.btn,li>.btn-group {
+        box-shadow: none;
+
+        border-radius: 0;
+        border-left-width: 1px;
+        border-right-width: 1px;
+
+
+        .btn {
+
+            border-right-width: 0px;
+        }
+
+    }
+    .btn.btn-default {
+
+        background: #fff;
+    }
+}
+.wysi-textarea-container {
+    padding: 0em;
+    margin-top: 1em;
+    position: relative;
+
+
+
+
+}
+ul.wysihtml5-toolbar > li {
+    margin: 0 !important;
+}
+.wysihtml5-sandbox {
+    margin-top: 0 !important;
+    padding: 3.5em 0.5em 0.5em !important;
+    height: 20em !important;
+
+}
+
+
+
+
+
+
+
+
+
+.nav-tabs.profile-tabs {
+    li a {
+        padding: 1.5em 3em;
+    }
+}
+.activity {
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    .activity-post {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        //border-bottom: 1px solid #eee;
+        .activity-image {
+            width: 2.7em;
+            height: 2.7em;
+            margin-left: 0.4em;
+            margin-right: 0.4em;
+        }
+        .activity-post-content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .activity-post-footer {
+            padding: 0.8em 1.5em;
+        }
+        .activity-post-action {
+            margin-right: 1em;
+            color: $color-faded;
+            font-size: 0.9em;
+            .btn-default.btn {
+                color: $color-faded;
+            }
+        }
+        .activity-post-title {
+            padding: 1.3em 1em;
+            margin-bottom: 0em;
+            a {
+                font-weight: 600;
+                color: $color-dimmed;
+
+            }
+        }
+        .time {
+            font-size: 0.8em;
+            margin-left:1em;
+        }
+    }
+}
+.activity-post-gallery {
+    .gallery-image {
+        height: 13em;
+        display: inline-block;
+        padding: 0em;
+        margin-right: 1.3em;
+        margin-bottom: 1.3em;
+    }
+}

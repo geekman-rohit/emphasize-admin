@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Panels</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Calendar
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li class="active">Calendar</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-lg-10">
+                <div class="panel">
+
+                        <div id="calendar"></div>
+
+
+                </div>
+
+            </div>
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script>
+$(function(){
+    $('#calendar').fullCalendar({
+        header: {
+
+			left: 'title',
+			right: 'today prev,next month,agendaWeek,agendaDay'
+        },
+        events: [
+            {
+                title: 'Allison\'s Birthday',
+                start: '2017-09-12',
+            },
+            {
+                title: 'Team Meeting',
+                start: '2017-09-13',
+
+            }
+            // etc...
+        ],
+    })
+})
+
+</script>
+</body>
+</html>

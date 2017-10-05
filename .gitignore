@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+#Build Directories
+build
+css
+dist
+web
+scripts/*.min.js

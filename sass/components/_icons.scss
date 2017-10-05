@@ -1,0 +1,73 @@
+
+.mdi {
+    font-size: 1em;
+    vertical-align: baseline;
+    &.mdi-1-5x {
+        font-size: 1.5em;
+    }
+    &.mdi-2x {
+        font-size: 2em;
+    }
+    &.mdi-3x {
+        font-size: 3em;
+    }
+    &.mdi-4x {
+        font-size: 4em;
+    }
+    &.mdi-5x {
+        font-size: 5em;
+    }
+}
+.mdi::before {
+    font-size: 1.2em;
+    position: relative;
+    bottom:0px;
+    vertical-align: middle;
+    line-height: 1;
+
+
+}
+.panel-action .mdi, .mdi.mdi-adjusted{
+    &::before {
+        position: relative;
+        bottom: 0.12em;
+    }
+
+
+}
+.btn .mdi {
+    &::before {
+        position: relative;
+        bottom: 0px;
+    }
+}
+.navbar {
+    .btn .mdi {
+        &::before {
+            position: relative;
+            bottom: 0;
+
+        }
+    }
+}
+.navbar .navbar-nav li {
+  .mdi {
+      &::before {
+          position: relative;
+          bottom: 0em;
+          font-size: 1.4em;
+      }
+  }
+
+}
+
+.btn-sm .mdi {
+    position: relative;
+    bottom: 1px;
+}
+.navbar .mdi::before {
+
+}
+.main-nav .mdi::before {
+
+}

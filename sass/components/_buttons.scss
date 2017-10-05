@@ -1,0 +1,366 @@
+/* * * * * * * * * *
+* Button Styling
+*
+* * * * * * * * * */
+
+// ---------------Button Variables--------------- //
+$btn-padding-base: 0.9em 1.5em;
+$btn-padding-box: 0.5em 1.5em;
+$btn-height-base: 3em;
+
+// ---------------Button Mixins--------------- //
+
+// Mixin to generate color variation styling  for All Buttons
+@mixin btn-variation($palette) {
+    background-color: map-get($palette,base);
+    border-color: map-get($palette,accent);
+    &:hover,&:focus,&:active{
+        @include btn-active-variation($palette);
+    }
+}
+// Mixin to generate color variation styling  for Active/Hovered Buttons
+@mixin btn-active-variation($palette) {
+    background-color: map-get($palette,accent);
+    border-color: map-get($palette,accent);
+}
+
+// Mixin to generate color variation styling  for Outline Buttons
+@mixin btn-box-variation($palette) {
+    color: map-get($palette,accent);
+    border-color: map-get($palette,dark);
+    &:hover,&:focus,&:active,&.active{
+        @include btn-box-active-variation($palette);
+    }
+}
+
+// Mixin to generate color variation styling  for Active/Hovered Outline Buttons
+@mixin btn-box-active-variation($palette) {
+    background-color: map-get($palette,base);
+    border-color: map-get($palette,accent);
+    color: white;
+}
+
+.btn {
+    /* Basic Styling For Buttons */
+    @include font-size(1);
+    box-shadow: $box-shadow-small;
+    line-height: 1.2;
+    padding: $btn-padding-base;
+    font-weight: 400;
+    height: $btn-height-base;
+    border-radius: $border-radius;
+    border-width: 0px;
+    border-style: solid;
+    overflow: hidden;
+    position: relative;
+
+    .fa,.oi,.mdi {
+        /* Give Margins for any icons in the button */
+        margin-right: 0.3em;
+        margin-left: 0.3em;
+    }
+
+    &.btn-default {
+        /* Color Styling For Default Buttons */
+        background-color: #f5f5f5;
+        border-color: #ddd;
+        &:hover,&:focus,&:active{
+            background-color: #eeeeee;
+            border-color: #ddd;
+        }
+    }
+
+    &.btn-primary {
+        /* Color Styling For  Buttons */
+        @include btn-variation($primary);
+    }
+
+    &.btn-success {
+        /* Color Styling For Primary Buttons */
+        @include btn-variation($success);
+    }
+
+    &.btn-info {
+        /* Color Styling For Info Buttons */
+        @include btn-variation($info);
+    }
+
+    &.btn-warning {
+        /* Color Styling For Warning Buttons */
+        @include btn-variation($warning);
+    }
+
+    &.btn-danger {
+        /* Color Styling For Danger Buttons */
+        @include btn-variation($danger);
+    }
+
+
+
+    &.btn-link {
+        /* Clear Styling for Link Buttons */
+        box-shadow:  none;
+        border-color: transparent;
+        display: inline;
+        padding: 0;
+        line-height: 1.4;
+        height: auto;
+        color:$link-color;
+    }
+
+    &.btn-transparent-light {
+        box-shadow:  none;
+        background: none;
+        color:#fff;
+        &:focus,&:active,&:focus:active {
+            outline: 0;
+            border: 0;
+        }
+    }
+    &.btn-xs {
+        /* Size for Extra Small Buttons */
+        @include font-size(0.7);
+    }
+
+
+    &.btn-sm {
+        /* Size for Small Buttons */
+        @include font-size(0.85);
+    }
+
+
+    &.btn-lg {
+        /* Size for Large Buttons */
+        @include font-size(1.25);
+    }
+
+
+    &.btn-box {
+        /* Box Outline Buttons Base Styling */
+        background: none;
+        color: #333;
+        border-width: 1px;
+        box-shadow: none;
+        padding: $btn-padding-box;
+
+        &.btn-default {
+            /* Box Outline Buttons Color Styling - Default */
+            background-color: white;
+            border-color: #777;
+            &:hover,&:focus,&:active,&.active{
+                background-color: #eee;
+                color: #333;
+            }
+        }
+
+        &.btn-primary {
+            /* Box Outline Buttons Color Styling - Primary */
+            @include btn-box-variation($primary);
+        }
+
+
+        &.btn-success {
+            /* Box Outline Buttons Color Styling - Success */
+            @include btn-box-variation($success);
+        }
+
+
+        &.btn-info {
+            /* Box Outline Buttons Color Styling - Info */
+            @include btn-box-variation($info);
+        }
+
+
+        &.btn-warning {
+            /* Box Outline Buttons Color Styling - Warning */
+            @include btn-box-variation($warning);
+        }
+
+
+        &.btn-danger {
+            /* Box Outline Buttons Color Styling - Danger */
+            @include btn-box-variation($danger);
+        }
+
+
+
+    }
+
+    &.active {
+        /* Color Styling For .active Buttons, defined separately so it can be easily extended for btn-groups */
+
+        &.btn-default {
+            background-color: #f5f5f5;
+            border-color: #ddd;
+        }
+        &.btn-primary {
+            @include btn-active-variation($primary);
+        }
+        &.btn-success {
+            @include btn-active-variation($success);
+        }
+        &.btn-info {
+            @include btn-active-variation($info);
+        }
+        &.btn-warning {
+            @include btn-active-variation($warning);
+        }
+        &.btn-danger {
+            @include btn-active-variation($danger);
+        }
+        &.btn-box {
+
+            &.btn-default {
+                background-color: #f5f5f5;
+                border-color: #ddd;
+            }
+            &.btn-primary {
+                @include btn-box-active-variation($primary);
+            }
+            &.btn-success {
+                @include btn-box-active-variation($success);
+            }
+            &.btn-info {
+                @include btn-box-active-variation($info);
+            }
+            &.btn-warning {
+                @include btn-box-active-variation($warning);
+            }
+            &.btn-danger {
+                @include btn-box-active-variation($danger);
+            }
+        }
+    }
+
+
+
+    &.btn-pill {
+        /* Border Radius for Pill Buttons */
+        border-radius: 10em;
+    }
+
+
+    &.btn-round {
+        /* Base Styling for Round Buttons */
+        padding: 0;
+        width: $btn-height-base;
+        height: $btn-height-base;
+        text-align: center;
+        border-radius:50%;
+        .fa,.mdi,.oi {
+            margin: 0;
+            font-size: 1em;
+            display: inline-block;
+        }
+        .oi {
+            font-size: 0.9em;
+        }
+
+    }
+
+
+}
+
+/* Dropdown Button Styling */
+
+
+.dropdown,.dropup {
+    &.open {
+        .btn.dropdown-toggle {
+            /* Style for Active Dropdown Button */
+            @extend .btn.active;
+        }
+    }
+
+}
+
+
+.btn-group {
+    /* Button Group Styling */
+    box-shadow: $box-shadow-mini;
+    border-radius: $border-radius;
+    .btn {
+        font-size: 1em;
+        box-shadow: none;
+        border-left-width: 1px;
+        border-left-style: solid;
+        &:first-child {
+            border-left-width: 0;
+        }
+
+
+    }
+    .btn-group {
+        box-shadow: none;
+        .btn {
+            border-left-width: 1px;
+        }
+    }
+    .btn.btn-box {
+        border-left-width: 1px;
+    }
+    &.btn-group-box {
+        box-shadow: none;
+    }
+    &.btn-group-xs {
+        /* Size for Extra Small Buttons */
+        @include font-size(0.7);
+    }
+
+
+    &.btn-group-sm {
+        /* Size for Small Buttons */
+        @include font-size(0.85);
+    }
+
+
+    &.btn-group-lg {
+        /* Size for Large Buttons */
+        @include font-size(1.25);
+    }
+}
+
+
+.btn-group-vertical {
+    /* Vertical Button Group Styling */
+    box-shadow: $box-shadow-mini;
+    border-radius: 0;
+    .btn {
+        border-radius: 0;
+        box-shadow: none;
+        border-top-width: 1px;
+        border-top-style: solid;
+        font-size: 1em;
+        &:first-child {
+            border-top-width: 0;
+            &:not(:last-child) {
+                border-radius: 0;
+            }
+
+        }
+
+    }
+    .btn-group,.btn-group-vertical {
+        box-shadow: none;
+        .btn {
+            border-top-width: 1px;
+        }
+    }
+    .btn.btn-box {
+        border-left-width: 1px;
+    }
+    &.btn-group-box {
+        box-shadow: none;
+    }
+
+}
+
+.btn-group,.btn-group-vertical {
+    /* Style Active Dropdown Button */
+    &.open {
+        .btn.dropdown-toggle {
+            @extend .btn.active;
+            box-shadow: none;
+        }
+    }
+}

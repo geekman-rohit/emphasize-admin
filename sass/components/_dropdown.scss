@@ -1,0 +1,101 @@
+/* * * * * * * * * *
+* Dropdown Menu styling
+*
+* * * * * * * * * */
+
+
+// ---------------Styles--------------- //
+.dropdown-menu {
+
+    width: auto;
+    border-radius: 0;
+    @include font-size(1);
+    padding: 0;
+    > li a {
+        padding: 1em 1.5em;
+    }
+    .divider {
+        margin: 0;
+        padding: 0;
+    }
+    animation-name: fadeIn;
+    animation-duration: 0.25s;
+    overflow: hidden;
+    animation-timing-function: ease;
+    transform-origin: top;
+    animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    margin-top: 1px;
+    box-shadow: $box-shadow-large;
+    a {
+
+    }
+    &.list-group{
+      width: 24em;
+      &.list-group-wide {
+        width: 26em;
+        li a {
+          .media-content {
+            white-space: normal;
+          }
+        }
+
+      }
+      color: $color-base;
+      &.list-group-linked {
+        li.list-group-item {
+          a {
+
+            padding: 0.8em 1.5em 0.8em 0.8em;
+
+          }
+        }
+      }
+      li a {
+
+        font-size: 0.95em;
+        .media {
+          position: relative;
+          .media-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .media-user {
+            margin-top: 0.1em;
+            margin-bottom: 0.3em;
+          }
+          .media-content {
+
+          }
+
+        }
+
+      }
+    }
+}
+.notification-dropdown {
+  .media {
+    .media-left {
+      padding-top: 2px;
+
+    }
+  }
+
+}
+.dropup {
+    .dropdown-menu {
+        transform-origin: bottom;
+    }
+}
+@keyframes fadeIn {
+    0%   {
+        opacity: 0;
+        transform:scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform:scale(1);
+
+    }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Emphasize Admin - Progress</title>
+<!-- build:include ../parts/head.html -->
+<!-- /build -->
+
+<!-- build:include ../parts/styles.html -->
+<!-- /build -->
+
+
+
+</head>
+<body class="">
+<div class="page-wrapper fixed-navbar-top">
+    <!-- build:include ../parts/topbar.html -->
+    <!-- /build -->
+    <!-- build:include ../parts/sidebar.html -->
+    <!-- /build -->
+    <div class="page">
+        <header class="ribbon">
+            <h2>
+                Breadcrumbs
+            </h2>
+            <ol class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">UI</a></li>
+              <li class="active">Breadcrumbs</li>
+            </ol>
+        </header>
+        <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Default Breadcrumbs</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    Add a <code>breadcrumb</code> class to a ol to create a breadcrumb
+                                </div>
+                                <div class="demo-elements">
+
+                                        <ol class="breadcrumb">
+                                          <li><a href="#">Home</a></li>
+                                          <li><a href="#">UI</a></li>
+                                          <li class="active">Breadcrumbs</li>
+                                        </ol>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Breadcrumbs with a caret as separator</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="demo-section">
+                                <div class="demo-details">
+                                    Add a <code>breadcrumb breadcrumb-caret</code> class to a ol to use a caret as separator
+                                </div>
+                                <div class="demo-elements">
+
+                                        <ol class="breadcrumb breadcrumb-caret">
+                                          <li><a href="#">Home</a></li>
+                                          <li><a href="#">UI</a></li>
+                                          <li class="active">Breadcrumbs</li>
+                                        </ol>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+
+
+                </div>
+                <!-- /.col-md-12 -->
+
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+        <!-- /.page-content -->
+    </div>
+    <!-- /.page -->
+</div>
+<!-- /.page-wrapper -->
+<!-- build:include ../parts/scripts.html -->
+<!-- /build -->
+<script>
+    $(function(){
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+          $('[data-toggle="popover"]').popover();
+        })
+    })
+</script>
+</body>
+</html>
