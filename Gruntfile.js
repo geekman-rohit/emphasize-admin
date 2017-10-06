@@ -83,6 +83,7 @@ module.exports = function(grunt) {
               {expand: true, src: ['css/**/*.css'], dest: 'dist', filter: 'isFile'},
               {expand: true, src: ['scripts/**/*.js'], dest: 'dist', filter: 'isFile'},
               {expand: true, src: ['img/**/*'], dest: 'dist', filter: 'isFile'},
+              {expand: true, src: ['vendor/**/*'], dest: 'dist', filter: 'isFile'},
           ]
       }
   },
@@ -95,6 +96,7 @@ module.exports = function(grunt) {
               destPrefix: 'dist/vendor'
           },
           files: {
+              'animate.css/animate.min.css': 'animate.css/animate.min.css',
               'bootstrap/dist/': 'bootstrap/dist/',
               'bootstrap-switch/dist/': 'bootstrap-switch/dist/',
               'bootstrap3-wysihtml5-bower/dist/': 'bootstrap3-wysihtml5-bower/dist/',
@@ -107,11 +109,10 @@ module.exports = function(grunt) {
               'font-awesome/css':'font-awesome/css',
               'font-awesome/fonts':'font-awesome/fonts',
               'fullcalendar/dist':'fullcalendar/dist',
-              'iCheck/skins/square/_all.css':'iCheck/skins/square/_all.css',
+              'iCheck/skins/square/':'iCheck/skins/square/',
               'iCheck/icheck.min.js':'iCheck/icheck.min.js',
               'jquery-slimscroll/jquery.slimscroll.min.js':'jquery-slimscroll/jquery.slimscroll.min.js',
               'jquery.easy-pie-chart/dist':'jquery.easy-pie-chart/dist',
-              'jquery.sparkline/dist':'jquery.sparkline/dist',
               'loaders.css/loaders.min.css':'loaders.css/loaders.min.css',
               'loaders.css/loaders.css.js':'loaders.css/loaders.css.js',
               'mdi/css':'mdi/css',

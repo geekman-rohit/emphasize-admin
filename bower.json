@@ -36,7 +36,8 @@
     "open-iconic": "^1.1.1",
     "bootstrap-switch": "^3.3.4",
     "fullcalendar": "^3.5.1",
-    "loaders.css": "^0.1.2"
+    "loaders.css": "^0.1.2",
+    "animate.css": "^3.5.2"
   },
   "resolutions": {
     "jquery": "^3.2.1"

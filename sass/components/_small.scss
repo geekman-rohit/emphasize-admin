@@ -1,6 +1,6 @@
 /* * * * * * *
 *  Styling for Small Components
-*  breadcrumb, main page title (ribbon), pulse sign, ripple effect
+*  breadcrumb, main page title (ribbon), notification-pulse sign, ripple effect
 *
 * * * * * * */
 .ribbon {
@@ -58,7 +58,7 @@
         opacity: 0;
     }
 }
-.pulse {
+.notification-pulse {
     position: relative;
     transform: scale(1.1);
     &.pulse-right {

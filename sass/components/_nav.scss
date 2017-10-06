@@ -58,10 +58,10 @@
         }
         &.active {
 
-            border-bottom: 1px solid $blue;
+            border-bottom: 1px solid map-get($primary,base);
             a {
                 border: 0;
-                border-bottom: 1px solid $blue;
+                border-bottom: 1px solid map-get($primary,base);
                 &:hover, &:focus,&:active {
 
                 }
@@ -87,9 +87,9 @@
         }
         &.active {
             a {
-                background-color: $blue;
+                background-color: map-get($primary,base);
                 &:hover, &:focus,&:active {
-                background-color: $blue;
+                background-color: map-get($primary,base);
                 }
             }
         }
