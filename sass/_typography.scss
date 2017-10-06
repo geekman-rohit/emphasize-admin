@@ -238,6 +238,10 @@ hr {
         margin-left: 0.5em !important;
         margin-right: 0em !important;
     }
+    &-b {
+        margin-bottom: 0.5em !important;
+    }
+
 }
 .mg-lg {
     margin-left: 1em !important;
@@ -249,6 +253,9 @@ hr {
     &-l {
         margin-left: 1em !important;
         margin-right: 0em !important;
+    }
+    &-b {
+        margin-bottom: 1em !important;
     }
 }
 .mg-center {

@@ -12,6 +12,17 @@ $(function(){
         })
     })
 
+    $('[data-toggle="class-toggle"]').each(function(){
+        var ele = $(this);
+        var classtotoggle = ele.attr('data-class-value');
+        var target = ele.attr('data-target');
+        ele.click(function(e){
+            console.log('hi');
+            e.preventDefault();
+            $(target).toggleClass(classtotoggle);
+        })
+    });
+
     $('.dropdown-menu.no-click-exit').click(function(e) {
         e.stopPropagation();
     });

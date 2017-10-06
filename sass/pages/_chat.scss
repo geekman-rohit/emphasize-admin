@@ -6,6 +6,7 @@
 }
 .inbox-container {
     @include clearfix;
+    position: relative;
 }
 .inbox-sidebar {
     padding: 1em 1em;
@@ -15,10 +16,48 @@
     .inbox-sidebar-btn {
         padding: 1em;
     }
-    float: left;
+    position: absolute;
+    left: 0;
+    top:0;
 
     border-right: 1px solid #eee;
 }
+.inbox-container.inbox-sidebar-visible {
+    .inbox-sidebar {
+        width: 18rem;
+        display: block;
+        z-index: 2;
+        background-color:$bgcolor-base;
+    }
+
+}
+.inbox-container {
+    .inbox-sidebar {
+        width: 0;
+        display: none;
+        z-index: 2;
+    }
+    .inbox-emails {
+        margin-left: 0rem;
+        z-index: 1;
+    }
+}
+@media (min-width: $screen-lg-min) {
+
+    .inbox-container {
+        .inbox-sidebar {
+            display: block;
+            width: 18rem;
+            z-index: 2;
+        }
+        .inbox-emails {
+            margin-left: 18rem;
+            z-index: 1;
+        }
+    }
+
+}
+
 .inbox-emails {
     background: white;
     min-height: 100vh;
@@ -51,6 +90,8 @@
     margin-left: 18rem;
     border-left: 1px solid #eee;
 
+    overflow-x: scroll;
+
 }
 .inbox-actions {
     padding: 1.5em;
@@ -62,6 +103,8 @@
 
     display: table;
     width: 100%;
+    min-width: 650px;
+
     .email {
 
         display: table-row;
