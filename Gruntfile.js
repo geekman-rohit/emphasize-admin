@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         },
         files: {
           'css/style.css':'sass/style.scss',
+          'css/extra/loaders.css':'sass/extra/loaders.scss',
         }
       }
     },
@@ -111,6 +112,8 @@ module.exports = function(grunt) {
               'jquery-slimscroll/jquery.slimscroll.min.js':'jquery-slimscroll/jquery.slimscroll.min.js',
               'jquery.easy-pie-chart/dist':'jquery.easy-pie-chart/dist',
               'jquery.sparkline/dist':'jquery.sparkline/dist',
+              'loaders.css/loaders.min.css':'loaders.css/loaders.min.css',
+              'loaders.css/loaders.css.js':'loaders.css/loaders.css.js',
               'mdi/css':'mdi/css',
               'mdi/fonts':'mdi/fonts',
               'moment/min/moment.min.js':'moment/min/moment.min.js',
@@ -130,7 +133,7 @@ module.exports = function(grunt) {
           files: [{
               expand: true,
               cwd: 'css',
-              src: ['*.css', '!*.min.css'],
+              src: ['**/*.css', '!**/*.min.css'],
               dest: 'css',
               ext: '.min.css'
           }]

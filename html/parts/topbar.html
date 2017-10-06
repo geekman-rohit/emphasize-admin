@@ -1,3 +1,41 @@
+<div id="loader-container" style="display:none">
+    <div id="loader">
+        <div class="loader-inner line-scale">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+</div>
+<style>
+#loader-container {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(241,246,251);
+    overflow: hidden;
+}
+#loader-container .loader-inner {
+    text-align: center;
+    position: absolute;
+    top:40%;
+    left: 10%;
+    width: 90%;
+    transform: scale(1.5);
+
+}
+#loader-container .loader-inner div {
+    background-color: #7359EE;
+}
+</style>
+<script type="text/javascript">
+    $('#loader-container').show();
+    $(document).ready(function(){
+        $('#loader-container').hide();
+    })
+</script>
 
 <nav class="navbar navbar-blue navbar-fixed-top topbar" style="" id="topbar">
 

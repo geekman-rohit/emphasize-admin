@@ -1,0 +1,92 @@
+@import "../variables/colors";
+
+@mixin loaders-color($loader-color) {
+
+    &.ball-clip-rotate > div {
+        border-color: $loader-color;
+        border-bottom-color: transparent;
+    }
+
+    &.ball-clip-rotate-pulse {
+        > div:first-child {
+            background-color: $loader-color;
+        }
+        > div:last-child {
+            border-color: $loader-color transparent;
+        }
+    }
+    &.square-spin > div {
+        border-color: transparent;
+        background-color:$loader-color;
+    }
+    &.ball-clip-rotate-multiple > div  {
+        border-color: $loader-color;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        &:last-child {
+            border-color: $loader-color transparent;
+        }
+    }
+
+    &.ball-rotate > div  {
+        background-color: $loader-color;
+        &::before, &::after {
+            background-color: $loader-color;
+        }
+    }
+    &.cube-transition,&.ball-zig-zag,&.ball-zig-zag-deflect,&.line-scale-party,&.line-scale,&.ball-pulse-rise,&.ball-grid-pulse,&.ball-pulse,
+    &.ball-scale-multiple,&.ball-pulse-sync,&.ball-beat,&.ball-spin-fade-loader,&.line-spin-fade-loader,&.ball-grid-beat,&.ball-scale-random,
+    &.line-scale-pulse-out,&.line-scale-pulse-out-rapid,&.ball-scale   {
+        > div {
+            background-color: $loader-color;
+        }
+    }
+
+
+
+    &.ball-scale-ripple,&.ball-scale-ripple-multiple,&.ball-triangle-path {
+        >div {
+            border-color: $loader-color;
+        }
+    }
+    &.triangle-skew-spin > div {
+        border-bottom-color: $loader-color;
+    }
+
+    &.pacman {
+        > div {
+            &:first-of-type,&:nth-child(2) {
+                border-color: $loader-color;
+                border-right-color: transparent;
+            }
+            &:nth-child(3),&:nth-child(4),&:nth-child(5) {
+                background-color: $loader-color;
+            }
+        }
+    }
+    &.semi-circle-spin > div {
+        background-image:linear-gradient(transparent 0,transparent 70%, $loader-color 30%, $loader-color 100%);
+    }
+
+}
+.loader-inner.loader-dark {
+    @include loaders-color(#345) ;
+}
+.loader-inner.loader-white {
+    @include loaders-color(#fff) ;
+}
+.loader-inner.loader-primary {
+    @include loaders-color(map-get($primary,base)) ;
+}
+.loader-inner.loader-info {
+    @include loaders-color(map-get($info,base)) ;
+}
+.loader-inner.loader-success {
+    @include loaders-color(map-get($success,base)) ;
+}
+.loader-inner.loader-danger {
+    @include loaders-color(map-get($danger,base)) ;
+}
+.loader-inner.loader-warning {
+    @include loaders-color(map-get($warning,base)) ;
+}

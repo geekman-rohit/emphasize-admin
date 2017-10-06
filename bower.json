@@ -35,9 +35,9 @@
     "sweetalert2": "^6.8.0",
     "open-iconic": "^1.1.1",
     "bootstrap-switch": "^3.3.4",
-    "fullcalendar": "^3.5.1"
+    "fullcalendar": "^3.5.1",
+    "loaders.css": "^0.1.2"
   },
-
   "resolutions": {
     "jquery": "^3.2.1"
   }
