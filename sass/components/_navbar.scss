@@ -61,7 +61,7 @@ $navbar-theme-primary: (
                 }
                 &.active {
                     > a {
-                        
+
                         border-left: 3px solid map-get($navbar-theme,background-base);
                     }
                 }
@@ -69,6 +69,11 @@ $navbar-theme-primary: (
                     >li>a {
                         border-left: 3px solid map-get($navbar-theme,background-base);
 
+                    }
+                    >li.active {
+                        a {
+                            color: map-get($navbar-theme,background-base);
+                        }
                     }
 
                 }

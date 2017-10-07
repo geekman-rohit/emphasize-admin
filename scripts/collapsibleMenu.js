@@ -137,6 +137,10 @@ $.fn.CollapsibleMenu = function(options) {
                     menuitem.addClass('active');
 
                     return true;
+                } else if(filepath+'/index.html' == window.location.pathname || filepath == window.location.pathname +'index.html' ) {
+                    menuitem.addClass('active');
+
+                    return true;
                 }
             }
         }

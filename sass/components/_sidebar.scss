@@ -163,9 +163,11 @@ $sidebar-theme-dark: (
                         > a {
                             color: map-get($sidebar-theme,color-base);
                             background-color: map-get($sidebar-theme,background-base);
+                            border-left: 0 !important;
                             &:hover,&:focus,&:active {
                                 color: map-get($sidebar-theme,color-highlight);
                                 background-color: none;
+                                border-left: 0 !important;
 
                             }
                         }

@@ -17,6 +17,8 @@
     padding-left: 3em;
 }
 </style>
+<link rel="stylesheet" href="../vendor/datatables/media/css/dataTables.bootstrap.min.css">
+
 </head>
 <body class="">
 <div class="page-wrapper fixed-navbar-top">
@@ -73,7 +75,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                                <img src="../img/red.jpg" alt="" class="img-thumb-xs img-circle"> James T. Kirk
+                                                <img src="../img/face1.jpeg" alt="" class="img-thumb-xs img-circle"> James T. Kirk
                                         </td>
                                         <td>
                                             USS Enterprise
@@ -91,7 +93,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="../img/rocket.jpg" alt="" class="img-thumb-xs img-circle">Erika Benteen
+                                            <img src="../img/face5.jpeg" alt="" class="img-thumb-xs img-circle">Erika Benteen
                                         </td>
                                         <td>
                                             USS Lakota
@@ -109,7 +111,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="../img/red.jpg" alt="" class="img-thumb-xs img-circle">Morgan Batesan
+                                            <img src="../img/face4.jpeg" alt="" class="img-thumb-xs img-circle">Morgan Batesan
                                         </td>
                                         <td>
                                             USS Bozeman
@@ -127,7 +129,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="../img/red.jpg" alt="" class="img-thumb-xs img-circle">Amasov
+                                            <img src="../img/face3.jpeg" alt="" class="img-thumb-xs img-circle">Amasov
                                         </td>
                                         <td>
                                             USS Endeavour
@@ -145,7 +147,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <img src="../img/red.jpg" alt="" class="img-thumb-xs img-circle">Douglas Adam
+                                            <img src="../img/face2.jpeg" alt="" class="img-thumb-xs img-circle">Douglas Adam
                                         </td>
                                         <td>
                                             USS Heart of Gold
@@ -176,6 +178,128 @@
             <!-- /.row -->
             <div class="row">
                 <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2>Data Table</h2>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <table class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            StarShip
+                                        </th>
+                                        <th>
+                                            Captain
+                                        </th>
+                                        <th>
+                                            First Officer
+                                        </th>
+                                        <th>
+                                            Crew Size
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            USS Enterprise
+                                        </td>
+                                        <td>
+                                            James T. Kirk
+                                        </td>
+                                        <td>
+                                            Ambassador Spock
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-link ">Assign Mission</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            USS Lakota
+                                        </td>
+                                        <td>
+                                            Erika Benteen
+                                        </td>
+                                        <td>
+                                            Elizabeth Braswell
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-link ">Assign Mission</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            USS Bozeman
+                                        </td>
+                                        <td>
+                                            Morgan Batesan
+                                        </td>
+                                        <td>
+                                            W. Bligh
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-link ">Assign Mission</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            USS Endeavour
+                                        </td>
+                                        <td>
+                                            Amasov
+                                        </td>
+                                        <td>
+                                            David Carson
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-link ">Assign Mission</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            USS Heart of Gold
+                                        </td>
+                                        <td>
+                                            Douglas Adam
+                                        </td>
+                                        <td>
+                                            Chandra
+                                        </td>
+                                        <td>
+                                            10
+                                        </td>
+                                        <td>
+                                            <button class="btn btn-link ">Assign Mission</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2>Default Table</h2>
@@ -956,5 +1080,12 @@
 
 <!-- build:include ../parts/scripts.html -->
 <!-- /build -->
+<script src="../vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="../vendor/datatables/media/js/dataTables.bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('.datatable').DataTable()
+    });
+</script>
 </body>
 </html>

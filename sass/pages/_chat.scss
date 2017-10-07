@@ -19,7 +19,7 @@
     position: absolute;
     left: 0;
     top:0;
-
+    box-shadow: $box-shadow-normal;
     border-right: 1px solid #eee;
 }
 .inbox-container.inbox-sidebar-visible {
@@ -90,7 +90,7 @@
     margin-left: 18rem;
     border-left: 1px solid #eee;
 
-    overflow-x: scroll;
+    overflow-x: auto;
 
 }
 .inbox-actions {
@@ -116,7 +116,7 @@
         padding-right: 2em;
         position: relative;
         height: 4em;
-        border-bottom: 1px solid #eee;
+
         cursor: pointer;
         color: $color-dimmed;
         &.unread {
@@ -132,6 +132,7 @@
             display: table-cell;
             line-height: 2em;
             vertical-align: middle;
+            border-bottom: 1px solid $separator-color;
         }
         .email-actions-left {
             width: 4.6em;
@@ -164,7 +165,29 @@
         }
     }
 }
+.emails-message {
+    min-width: 32px;
+    .message-sender {
+        padding: 1em;
+        border-top: 1px solid $separator-color;
+        border-bottom: 1px solid $separator-color;
+    }
+    .message-user {
+        font-size: 1.15em;
+        padding-top: 0.3em;
+    }
+    .message-details {
+        width: 10em;
+        text-align: right;
+    }
+    .message-message {
+        padding: 2em;
+        max-width: 80em;
+        font-size: 1.05em;
+    }
+}
 .inbox-compose-form {
+    min-width: 650px;
     padding: 0em 2em 2em;
     textarea.form-control {
         border:1px solid #ddd;

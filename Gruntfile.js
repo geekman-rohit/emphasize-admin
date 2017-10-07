@@ -17,11 +17,11 @@ module.exports = function(grunt) {
     },
     watch: {
         sass: {
-            files: ["**/*.scss"],
+            files: ["sass/**/*.scss"],
             tasks: ['sass','copy']
         },
         js: {
-          files: ["js/**/app.js"],
+          files: ["scripts/**/*.js"],
           tasks: ['uglify','copy']
         },
         html: {
@@ -104,6 +104,9 @@ module.exports = function(grunt) {
               'c3/c3.min.css': 'c3/c3.min.css',
               'chart.js/dist': 'chart.js/dist',
               'chartist/dist':'chartist/dist',
+              'datatables/media/js/jquery.dataTables.min.js':'datatables/media/js/jquery.dataTables.min.js',
+              'datatables/media/js/dataTables.bootstrap.min.js':'datatables/media/js/dataTables.bootstrap.min.js',
+              'datatables/media/css/dataTables.bootstrap.min.css':'datatables/media/css/dataTables.bootstrap.min.css',
               'd3/d3.min.js':'d3/d3.min.js',
               'dropzone/dist':'dropzone/dist',
               'font-awesome/css':'font-awesome/css',
@@ -171,8 +174,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
   grunt.loadNpmTasks('grunt-bowercopy');
   // Default task(s).
-  grunt.registerTask('build', ['processhtml','sass','postcss','cssmin','uglify']);
-  grunt.registerTask('dist', ['build','copy','bowercopy']);
-  grunt.registerTask('default', ['dist','browserSync','watch']);
+  grunt.registerTask('build', ['processhtml','sass','postcss','cssmin','uglify','copy','bowercopy']);
+  grunt.registerTask('default', ['build','browserSync','watch']);
 
 };

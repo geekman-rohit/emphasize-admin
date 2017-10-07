@@ -28,19 +28,19 @@ $orange : #F57C00;
 
 // Contextual colors
 $primary: (
-    faded:lighten(#7359EE,32%),
-    light: lighten(#7359EE,5%),
-    base: #7359EE,
-    accent: darken(#7359EE,3%),
-    dark: darken(#7359EE,8%),
+    faded:lighten(#7259EF,32%),
+    light: lighten(#7259EF,5%),
+    base: #7259EF,
+    accent: darken(#7259EF,3%),
+    dark: darken(#7259EF,8%),
 );
 
 $warning: (
-    faded:lighten(#FFB22B,35%),
-    light: lighten(#FFB22B,5%),
-    base: #FFB22B,
-    accent: darken(#FFB22B,6%),
-    dark: darken(#FFB22B,15%),
+    faded:lighten(#FFB12B,35%),
+    light: lighten(#FFB12B,5%),
+    base: #FFB12B,
+    accent: darken(#FFB12B,6%),
+    dark: darken(#FFB12B,15%),
 );
 
 $info: (
@@ -51,19 +51,19 @@ $info: (
     dark: darken(#1E88E5,15%),
 );
 $danger: (
-    faded:lighten(#fc4b6c,30%),
-    light: lighten(#fc4b6c,10%),
-    base: lighten(#fc4b6c,4%),
-    accent: darken(#fc4b6c,1%),
-    dark: darken(#fc4b6c,10%),
+    faded:lighten(#FC5F7C,24%),
+    light: lighten(#FC5F7C,6%),
+    base: #FC5F7C,
+    accent: darken(#FC5F7C,4%),
+    dark: darken(#FC5F7C,14%),
 );
 
 $success: (
-    faded:lighten(#26C1B1,39%),
-    light: lighten(#26C1B1,4%),
-    base: darken(#26C1B1,0%),
-    accent: darken(#26C1B1,4%),
-    dark: darken(#26C1B1,15%),
+    faded:lighten(#26C1B2,39%),
+    light: lighten(#26C1B2,4%),
+    base: darken(#26C1B2,0%),
+    accent: darken(#26C1B2,4%),
+    dark: darken(#26C1B2,15%),
 );
 
 $grey:(

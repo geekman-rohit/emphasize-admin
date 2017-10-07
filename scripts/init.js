@@ -113,11 +113,6 @@ $(function(){
     });
     $(".slimScrollBar").hide()
 
-
-
-    // Peity Donuts Initialize
-    $("span.donut").peity("donut");
-
     // Initialize Sidebar and Topbar Fixed States
 
     $('.fixed-sidebar-toggle').attr('checked',true);

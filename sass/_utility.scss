@@ -1,0 +1,125 @@
+@mixin margin-variation($size) {
+    margin-left: $size !important;
+    margin-right: $size !important;
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+    &-h {
+        margin-right: $size !important;
+        margin-right: $size !important;
+    }
+    &-v {
+        margin-top: $size !important;
+        margin-bottom: $size !important;
+    }
+    &-r {
+
+        margin-right: $size !important;
+    }
+    &-l {
+        margin-left: $size !important;
+
+    }
+    &-b {
+        margin-bottom: $size !important;
+    }
+    &-t {
+        margin-top: $size !important;
+    }
+}
+@mixin padding-variation($size) {
+    padding-left: $size !important;
+    padding-right: $size !important;
+    padding-top: $size !important;
+    padding-bottom: $size !important;
+    &-h {
+        padding-right: $size !important;
+        padding-right: $size !important;
+    }
+    &-v {
+        padding-top: $size !important;
+        padding-bottom: $size !important;
+    }
+    &-r {
+
+        padding-right: $size !important;
+    }
+    &-l {
+        padding-left: $size !important;
+
+    }
+    &-b {
+        padding-bottom: $size !important;
+    }
+    &-t {
+        padding-top: $size !important;
+    }
+}
+
+.mg-null {
+    @include margin-variation(0);
+}
+.mg-xs {
+    @include margin-variation(0.2em);
+
+}
+.mg-sm {
+    @include margin-variation(0.5em);
+}
+.mg-n,.mg {
+    @include margin-variation(1em);
+}
+.mg-lg {
+    @include margin-variation(1.5em);
+}
+.mg-xlg {
+    @include margin-variation(2em);
+}
+
+.mg-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.pd-null {
+    @include padding-variation(0);
+}
+.pd-xs {
+    @include padding-variation(0.2em);
+
+}
+.pd-sm {
+    @include padding-variation(0.5em);
+}
+.pd-n,.pd {
+    @include padding-variation(1em);
+}
+.pd-lg {
+    @include padding-variation(1.5em);
+}
+.pd-xlg {
+    @include padding-variation(2em);
+}
+
+.bg-primary {
+    color: #fff;
+    background-color: map-get($primary,base);
+}
+.bg-success {
+    color: #fff;
+    background-color: map-get($primary,base);
+}
+.bg-warning {
+    color: #fff;
+    background-color: map-get($primary,base);
+}
+.bg-info {
+    color: #fff;
+    background-color: map-get($primary,base);
+}
+.bg-danger {
+    color: #fff;
+    background-color: map-get($primary,base);
+}
+.bg-grey {
+    background-color: map-get($grey,base);
+}

@@ -9,6 +9,7 @@ $(function(){
         } else {
             panel.addClass('panel-collapsed');
         }
+        $(this).blur();
     })
     $('.panel .panel-action-fullscreen').click(function(e){
 
@@ -20,5 +21,6 @@ $(function(){
         } else {
             panel.addClass('panel-fullscreen');
         }
+        $(this).blur();
     })
 })
