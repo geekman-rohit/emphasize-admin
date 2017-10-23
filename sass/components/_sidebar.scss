@@ -166,7 +166,7 @@ $sidebar-theme-dark: (
                             border-left: 0 !important;
                             &:hover,&:focus,&:active {
                                 color: map-get($sidebar-theme,color-highlight);
-                                background-color: none;
+                                background-color: map-get($sidebar-theme,background-base);
                                 border-left: 0 !important;
 
                             }

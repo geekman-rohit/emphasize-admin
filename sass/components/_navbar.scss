@@ -15,35 +15,27 @@ $navbar-theme-default: (
 );
 $navbar-theme-dark: (
     background-base: #282F39,
-    background-accent: lighten(#282F39,10%),
+    background-accent: #3d4857,
     border-color: #282F39,
     color-base: #fff,
-    color-header: #fff,
 );
-$navbar-theme-in: (
-    background-base: #2f4050,
-    background-accent: #lighten(#2f4050,3%),
-    border-color: #3a3a3a,
-    color-base: #fff,
 
-
-);
 $navbar-theme-blue: (
-    background-base: lighten(#1E88E5,2%),
-    background-accent: lighten(#1E88E5,7%),
-    border-color:  darken(#1E88E5,1%),
+    background-base: #278de6,
+    background-accent: #3e99e9,
+    border-color: #1a86e4,
     color-base: #fff,
 );
 $navbar-theme-teal: (
     background-base: map-get($success,base),
-    background-accent: lighten(#26C1B1,2%),
+    background-accent: #28cab9,
     border-color: map-get($success,accent),
     color-base: #fff,
 );
 $navbar-theme-primary: (
-    background-base: lighten(#7359EE,0%),
-    background-accent: lighten(#7359EE,2%),
-    border-color:  darken(#7359EE,0%),
+    background-base: #7359ee,
+    background-accent: #7b62ef,
+    border-color:  #7359ee,
     color-base: #fff,
 );
 
@@ -350,9 +342,6 @@ $navbar-theme-primary: (
         @include navbar-theme-generate($navbar-theme-blue);
     }
 
-    &.navbar-in {
-        @include navbar-theme-generate($navbar-theme-in);
-    }
     &.navbar-teal {
         @include navbar-theme-generate($navbar-theme-teal);
     }
