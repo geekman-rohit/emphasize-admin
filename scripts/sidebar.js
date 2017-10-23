@@ -1,3 +1,4 @@
+"use strict";
 /**
 * CollpasibleSlider
 * This is release of CollpasibleSlider is to be used only within the Emphasize Admin Template

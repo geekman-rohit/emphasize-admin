@@ -1,3 +1,4 @@
+"use strict";
 $(function(){
     $('[data-toggle="class-set"]').each(function(){
         var ele = $(this);

@@ -1,3 +1,4 @@
+"use strict";
 $(function(){
     $('.panel .panel-collapse-toggle').click(function(e){
 

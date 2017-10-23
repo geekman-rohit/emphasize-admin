@@ -1,3 +1,4 @@
+"use strict";
 /**
 * CollapsibleMenu
 * This is release of CollapsibleMenu is to be used only within the Emphasize Admin Template
