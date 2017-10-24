@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            'dist/css/style.min.css'
+            'dist/css/style.min.css','dist/css/style.css'
           ]
         },
         options: {
