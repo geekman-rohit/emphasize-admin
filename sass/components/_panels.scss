@@ -1,6 +1,33 @@
 /* * * * * * *
 * Panels Styling
 *
+* *********[Panel Structure]************
+
+1. .panel
+
+    a. Panel Cover
+        i. Panel Heading(.panel-heading)
+            A. Heading 2 (h2)
+                **** Panel Heading Goes Here *****
+    ------------- OR --------------------
+    a. Panel Heading (.panel-heading)
+        i. Heading 2 (h2)
+            **** Panel Heading Goes Here *****
+
+
+    b. Panel Large Action (Optional) (.panel-highlight-action)
+        i. Action Button (.btn)
+
+    c. Panel Highlighted Image (Optional) (.panel-highlight-image)
+        ii. Action Image (img)
+
+    d. Panel Body (.panel-body)
+
+        ****** Your Content Goes Here ********
+
+
+    e. Panel Footer (.panel-footer)
+
 * * * * * * */
 
 // ---------------Mixins--------------- //

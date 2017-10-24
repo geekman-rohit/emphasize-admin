@@ -3,7 +3,19 @@
 *
 * sidebar
 *
-* * * * * * * * * */
+********** [Sidebar Structure] ************
+1. .sidebar
+
+    a. Scrollable Body (.sidebar-body)
+
+        i. Sidebar Cover (.sidebar-cover)
+            A. Sidebar User (.sidebar-user)
+
+        ii. Main Navigation (.main-nav-container)
+
+    *Wrap sidebar-body around sidebar-scrollable-content to make it custom scroll properly*
+
+* * * * * * */
 
 // ---------------Variables--------------- //
 
@@ -83,7 +95,6 @@ $sidebar-theme-dark: (
 
                 font-weight: map-get($sidebar-theme,weight-accent);
                 outline: 0;
-                //background:#f5f5f5;
                 color: map-get($sidebar-theme,color-highlight);
 
             }

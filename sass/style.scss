@@ -1,12 +1,82 @@
 // Master Sass file to be compiled
 // Add or Remove Files as per your requirement
+
+
 /**
-* Emphasize Admin Master Style Sheet
+* ***************[Emphasize Admin Style Sheet]****************
 *
-*
-*
+* Emphasize uses Sass to generate it's styles. Check sass/ folder for Sass Code
+* All pages using Emphasize Style Sheet Must follow the Layout mentioned Below for best use
 *
 */
+
+/**
+* ************[Page Level Table Of Contents]************
+*
+* This is the Page Level Table of Contents
+* You will find Component Styles in the respective component's sass file
+* Or lower in the compiled css file (Simply Lookup the Component class with Find )
+*
+
+*******[PAGE LAYOUT]*******
+
+1. [HEAD]
+
+    i. Title
+    ii. Metadata
+    iii. StyleSheets
+    iv. Critical Javascript
+
+2. [BODY]
+
+    i. Full Page Wrapper Div (div.page-wrapper)
+
+        a. Loading Sign (div#loader-container)
+        b. TopBar (div.navbar#topbar)
+        c. Left Sidebar (div.sidebar.sidebar-left)
+        d. Right Sidebar (Optional) (div.sidebar.sidebar-right)
+        f. Main Page Division (div.page)
+            A. Page Header (header.ribbon)
+            B. Page Content (div.page-content)
+                *** The Contents of Your Page Go Here****
+
+    ii. JavaScript Files
+
+
+
+* ******[ReUsable Components]*******
+*
+* Emphasize Admin works on top of Bootstrap 3.
+* The following Components have been heavily modified over Bootstrap 3
+*
+
+***[CSS]***
+1. Forms (sass/_forms.scss)
+2. Media (sass/_media.scss)
+3. Tables (sass/_tables.scss)
+4. Typography (sass/_typography.scss)
+
+***[Bootstrap Components]***
+1. Alerts (sass/components/_alerts.scss) [.alert]
+2. Buttons (sass/components/_buttons.scss) [.btn]
+3. Dropdowns (sass/components/_dropdown.scss) [.dropdown]
+4. Icons (sass/components/_icons.scss) [.fa,.mdi,.oi]
+5. Labels (sass/components/_labels.scss) [.label, .badge]
+6. Lists (sass/components/_list.scss) [.list-group]
+7. Navigation & Tabs (sass/components/_nav.scss) [.nav-tabs]
+8. NavBar (sass/components/_navbar.scss) [.navbar]
+9. Panels (sass/components/_panels.scss) [.panel]
+10. Progress Bars (sass/components/_progress.scss) [.progress]
+11. Breadcrumb (sass/components/_small.scss) [.breadcrumb]
+
+***[New Components]***
+1. Sidebar (sass/components/_sidebar.scss) [.sidebar]
+2. Pulse (sass/components/_small.scss) [.notification-pulse]
+
+
+*/
+
+
 @import "variables/variables"; // Variable Files
 @import "mixins"; // Mixins
 @import "typography"; // Basic Typography Styles
@@ -18,4 +88,4 @@
 @import "layout"; // Layout
 @import "pages/pages"; // Special Pages Styling Files
 @import "charts/charts"; // Styling for svg based charts
-@import "demo"; // Special Pages Styling Files
+@import "demo"; // Special Demo Pages Styling Files

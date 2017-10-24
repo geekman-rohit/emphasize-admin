@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     watch: {
         sass: {
             files: ["sass/**/*.scss"],
-            tasks: ['sass','copy']
+            tasks: ['sass','postcss','cssmin','copy']
         },
         js: {
           files: ["scripts/**/*.js"],
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-            'css/style.css',
+            'dist/css/style.min.css'
           ]
         },
         options: {

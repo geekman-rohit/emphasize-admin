@@ -1,9 +1,26 @@
 /* * * * * * * * * *
 * Navbar, Main Topbar Styling
 *
-* navbar
+* .navbar
 *
-* * * * * * * * * */
+********** [Navbar Structure] ************
+1. .navbar
+
+    a. Navbar Header (.navbar-header)
+        i. Brand Name (.navbar-brand)
+
+    b. Navbar Body (.navbar-body)
+
+        @. Navbar Nav (.navbar-nav)
+        @. Navbar Form (.navbar-form)
+        @. Button (.navbar-btn)
+
+    *** [Utility Classes] ******
+
+        @. .navbar-left
+        @. .navbar-right
+
+* * * * * * */
 
 // ---------------Variables--------------- //
 
