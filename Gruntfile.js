@@ -98,6 +98,7 @@ module.exports = function(grunt) {
           files: {
               'animate.css/animate.min.css': 'animate.css/animate.min.css',
               'bootstrap/dist/': 'bootstrap/dist/',
+              'bootstrap-datepicker/dist/': 'bootstrap-datepicker/dist/',
               'bootstrap-switch/dist/': 'bootstrap-switch/dist/',
               'bootstrap3-wysihtml5-bower/dist/': 'bootstrap3-wysihtml5-bower/dist/',
               'c3/c3.min.js':'c3/c3.min.js',

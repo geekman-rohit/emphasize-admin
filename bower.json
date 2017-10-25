@@ -38,7 +38,8 @@
     "fullcalendar": "^3.5.1",
     "loaders.css": "^0.1.2",
     "animate.css": "^3.5.2",
-    "datatables": "^1.10.16"
+    "datatables": "^1.10.16",
+    "bootstrap-datepicker": "^1.7.1"
   },
   "resolutions": {
     "jquery": "^3.2.1"

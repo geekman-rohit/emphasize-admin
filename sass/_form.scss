@@ -290,3 +290,19 @@ label {
     font-size: 0.9em;
     padding: 4px 7px;
 }
+
+.datepicker.datepicker-dropdown {
+    padding: 0.5em;
+    box-shadow: $box-shadow-large;
+    border: 0;
+    table tr td {
+        padding: 0.7em;
+    }
+
+}
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled.disabled, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover.disabled, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover:hover, .datepicker table tr td.active.disabled:hover[disabled], .datepicker table tr td.active.disabled[disabled], .datepicker table tr td.active:active, .datepicker table tr td.active:hover, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover.disabled, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active:hover[disabled], .datepicker table tr td.active[disabled]
+{
+    background-color: map-get($info,base);
+    background-image: none;
+    border-radius: 0;
+}

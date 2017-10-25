@@ -4,7 +4,7 @@
 <title>Emphasize Admin - Panels</title>
 <!-- build:include ../parts/head.html -->
 <!-- /build -->
-
+<link rel="stylesheet" href="../vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
 <!-- build:include ../parts/styles.html -->
 <!-- /build -->
 
@@ -19,11 +19,11 @@
     <div class="page">
         <header class="ribbon">
             <h2>
-                Panels
+                Forms
             </h2>
             <ol class="breadcrumb">
               <li><a href="#">Home</a></li>
-              <li class="active">Panels</li>
+              <li class="active">Forms</li>
             </ol>
         </header>
         <div class="page-content">
@@ -362,11 +362,45 @@
                         </div>
                     </div>
                     <!-- /.panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h2>Datepicker</h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-lg-6">
+                                <div class="" style="max-width:25em;">
+                                    <div class="form-group">
+                                      <label for="form-date">Date</label>
+                                      <input type="text" class="form-control datepicker-input" id="form-date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="" style="max-width:25em;">
+                                    <div class="form-group">
+                                        <label for="form-date">Date with Icon</label>
+                                        <div>
+                                            <div class="input-group datepicker-input-group date">
+                                                <input type="text" class="form-control">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- /.panel -->
                 </div>
             </div>
             <!-- /.row -->
             <div class="row">
                 <div class="col-md-7">
+
                     <div class="panel">
                         <div class="panel-heading">
                             <h2>Basic Inputs</h2>
@@ -423,5 +457,16 @@
 <!-- /.page-wrapper -->
 <!-- build:include ../parts/scripts.html -->
 <!-- /build -->
+<script src="../vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(function(){
+        $('.datepicker-input').datepicker({
+            autoclose: true
+        });
+        $('.datepicker-input-group').datepicker({
+            autoclose: true
+        });
+    })
+</script>
 </body>
 </html>

@@ -147,24 +147,7 @@ a {
     color: map-get($success,accent);
 
 }
-.bg-primary {
-    background-color: map-get($primary,base);
-}
-.bg-info {
-    background-color: map-get($info,faded);
 
-}
-.bg-warning {
-    background-color: map-get($warning,faded);
-}
-.bg-danger {
-    background-color: map-get($danger,faded);
-
-}
-.bg-success {
-    background-color: map-get($success,faded);
-
-}
 
 hr {
     border-color: $separator-color;

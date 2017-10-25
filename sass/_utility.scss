@@ -99,26 +99,28 @@
 .pd-xlg {
     @include padding-variation(2em);
 }
-
 .bg-primary {
-    color: #fff;
-    background-color: map-get($primary,base);
-}
-.bg-success {
-    color: #fff;
-    background-color: map-get($primary,base);
-}
-.bg-warning {
     color: #fff;
     background-color: map-get($primary,base);
 }
 .bg-info {
     color: #fff;
-    background-color: map-get($primary,base);
+    background-color: map-get($info,base);
+
+}
+.bg-warning {
+    color: #fff;
+    background-color: map-get($warning,base);
 }
 .bg-danger {
     color: #fff;
-    background-color: map-get($primary,base);
+    background-color: map-get($danger,base);
+
+}
+.bg-success {
+    color: #fff;
+    background-color: map-get($success,base);
+
 }
 .bg-grey {
     background-color: map-get($grey,base);
