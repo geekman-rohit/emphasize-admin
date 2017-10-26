@@ -101,14 +101,14 @@ $.fn.collpasibleSlider = function(options) {
     }
 
     function registerToggleButton(selector){
-        $(selector).click(function(){
+        $(selector).on('click', function(){
             toggle(element);
             $(selector).toggleClass('active');
         })
     }
 
     function registerHideButton(selector){
-        $(selector).click(function(){
+        $(selector).on('click',function(){
             toggleCollapse(element);
             $(selector).toggleClass('active');
         })

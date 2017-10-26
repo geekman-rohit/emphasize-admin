@@ -35,7 +35,7 @@ $.fn.CollapsibleMenu = function(options) {
         var calculatedheight = submenu[0].scrollHeight;
         submenu.data('calculated-height',calculatedheight);
         submenu.css('max-height',calculatedheight+'px');
-        submenu.siblings('a').click(function(event){
+        submenu.siblings('a').on('click', function(event){
             $(this).blur();
             event.preventDefault();
             if(submenu.hasClass(settings.expandClass)) {

@@ -1,6 +1,6 @@
 "use strict";
 $(function(){
-    $('.panel .panel-collapse-toggle').click(function(e){
+    $('.panel .panel-collapse-toggle').on('click', function(e){
 
         var panels = $(this).parents('.panel');
         var panel = $(panels[0]);
@@ -12,7 +12,7 @@ $(function(){
         }
         $(this).blur();
     })
-    $('.panel .panel-action-fullscreen').click(function(e){
+    $('.panel .panel-action-fullscreen').on('click', function(e){
 
         var panels = $(this).parents('.panel');
         var panel = $(panels[0]);
