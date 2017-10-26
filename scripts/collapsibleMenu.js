@@ -23,9 +23,23 @@ $.fn.CollapsibleMenu = function(options) {
         if(settings.autoDetectActive) {
             detectCurrent(element);
         }
+        //Generate Max Heights for animation
         element.children('li').children('ul').each(function(){
             var submenu = $(this);
             process(submenu);
+        });
+        //Register Delegated Click Event
+        element.on('click','li a', function(event){
+            $(this).blur();
+            var submenu = $(this).siblings('ul');
+            if(submenu.length > 0) {
+                event.preventDefault();
+                if(submenu.hasClass(settings.expandClass)) {
+                    collapse(submenu);
+                } else {
+                    expand(submenu);
+                }
+            }
         });
     })
 
@@ -35,15 +49,6 @@ $.fn.CollapsibleMenu = function(options) {
         var calculatedheight = submenu[0].scrollHeight;
         submenu.data('calculated-height',calculatedheight);
         submenu.css('max-height',calculatedheight+'px');
-        submenu.siblings('a').on('click', function(event){
-            $(this).blur();
-            event.preventDefault();
-            if(submenu.hasClass(settings.expandClass)) {
-                collapse(submenu);
-            } else {
-                expand(submenu);
-            }
-        });
         submenu.children('li').children('ul').each(function(){
             var submenu2 = $(this);
 
