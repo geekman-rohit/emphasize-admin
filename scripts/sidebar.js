@@ -143,7 +143,7 @@ $(function(){
         });
     }
 
-    $(window).resize(function(){
+    $(window).on('resize', function(){
 
         if($(window).width() < 990) {
             $('.sidebar.sidebar-left').collpasibleSlider({

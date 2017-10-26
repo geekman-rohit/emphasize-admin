@@ -46,7 +46,7 @@ $(function(){
     // Adjust Form
 
     $('.md-form-group').each(function(){
-        $(this).find('input').focus(function(){
+        $(this).find('input').on('focus',function(){
             $(this).siblings('label').addClass('small');
         })
         $(this).find('input').blur(function(){
